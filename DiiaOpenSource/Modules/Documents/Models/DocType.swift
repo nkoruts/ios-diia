@@ -2,15 +2,13 @@ import UIKit
 import DiiaDocumentsCommonTypes
 
 enum DocType: String, Codable, CaseIterable {
+    // TODO: - REMOVE
     case driverLicense = "driver-license"
-    case taxpayerСard = "taxpayer-card"
 
     init?(rawValue: String) {
         switch rawValue {
         case "driver-license", "driverLicense":
             self = .driverLicense
-        case "taxpayer-card", "taxpayerСard":
-            self = .taxpayerСard
         default:
             return nil
         }
@@ -20,8 +18,6 @@ enum DocType: String, Codable, CaseIterable {
         switch self {
         case .driverLicense:
             return R.Strings.driver_document_name.localized()
-        case .taxpayerСard:
-            return ""
         }
     }
 
@@ -36,15 +32,12 @@ enum DocType: String, Codable, CaseIterable {
     var faqCategoryId: String {
         switch self {
         case .driverLicense: return "driverLicense"
-        case .taxpayerСard: return ""
         }
     }
 
     func storingKey() -> StoringKey? {
         switch self {
         case .driverLicense:
-            return .driverLicense
-        case .taxpayerСard:
             return nil
         }
     }

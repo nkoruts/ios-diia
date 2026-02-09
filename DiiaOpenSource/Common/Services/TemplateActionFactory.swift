@@ -5,17 +5,8 @@ import DiiaAuthorization
 struct TemplateActionFactory {
     static func refreshTemplateAction(with callback: @escaping Callback) -> (AlertTemplateAction) -> Void {
         return { action in
-            switch action {
-            case .authMethods:
-                AppRouter.instance.currentView()?.present(
-                    module: ProlongStartModule(completionHandler: callback)
-                )
-            case .logout:
-                ServicesProvider.shared.authService.logout()
-                callback()
-            default:
-                break
-            }
+            ServicesProvider.shared.authService.logout()
+            callback()
         }
     }
 }

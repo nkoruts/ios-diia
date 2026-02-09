@@ -138,28 +138,18 @@ class AppRouter {
                     authFlow: authFlow,
                     completionHandler: { (pincode, view) in
                         ServicesProvider.shared.authService.setPincode(pincode: pincode)
-                        switch BiometryHelper.biometricType() {
-                        case .none:
-                            AppRouter.instance.open(module: MainTabBarModule(), needPincode: false, asRoot: true)
-                            AppRouter.instance.didFinishStartingWithPincode = true
-                        default:
-                            self.storeHelper.save(false, type: Bool.self, forKey: .isBiometryEnabled)
-                            view.open(module: BiometryRequestModule(viewModel: .default(authFlow: authFlow)))
-                        }
+                        AppRouter.instance.open(module: MainTabBarModule(), needPincode: false, asRoot: true)
+                        AppRouter.instance.didFinishStartingWithPincode = true
                     }
                 )
             )
         }
-        switch ServicesProvider.shared.authService.authState {
-        case .userAuth:
-            StartScenarioService().beginLoginScenarios()
-            if ServicesProvider.shared.authService.havePincode() {
-                open(module: MainTabBarModule(), needPincode: true, asRoot: true)
-            } else {
-                open(module: preparePinCodeModule(.login), needPincode: false)
-            }
-        case .notAuthorized, .serviceAuth:
-            open(module: StartAuthorizationModule(), needPincode: false, asRoot: true)
+        
+        StartScenarioService().beginLoginScenarios()
+        if ServicesProvider.shared.authService.havePincode() {
+            open(module: MainTabBarModule(), needPincode: true, asRoot: true)
+        } else {
+            open(module: preparePinCodeModule(.login), needPincode: false)
         }
     }
     

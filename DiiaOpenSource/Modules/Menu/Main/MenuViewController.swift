@@ -6,7 +6,6 @@ protocol MenuView: BaseView {
     func clearStack()
     func addList(list: DSListViewModel)
     func addTransparentList(list: DSListViewModel)
-    func share(url: String)
     func setTitle(title: String)
 }
 
@@ -55,19 +54,11 @@ final class MenuViewController: UIViewController, Storyboarded {
         ]
         
         privacyLabel.attributedText = NSAttributedString(string: R.Strings.authorization_personal_data_message.localized(), attributes: attributes)
-        
-        let personalDataTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(showPersonalDataMessage))
-        privacyLabel.addGestureRecognizer(personalDataTapRecognizer)
-        privacyLabel.isUserInteractionEnabled = true
     }
     
     // MARK: - Private Methods
     @IBAction private func logoutButtonTapped() {
         showLogoutAlert()
-    }
-    
-    @objc private func showPersonalDataMessage() {
-        presenter.showPersonalDataMessage()
     }
 }
 
@@ -89,34 +80,27 @@ extension MenuViewController: MenuView {
         stackView.addArrangedSubview(view)
     }
     
-    func share(url: String) {
-        let vc = UIActivityViewController(activityItems: [url], applicationActivities: [])
-        present(vc, animated: true)
-    }
-    
     func setTitle(title: String) {
         self.title = title
-        topView.configure(
-            viewModel: .init(
-                title: title,
-                details: R.Strings.general_app_version.formattedLocalized(arguments: AppConstants.App.appVersion)
-            )
-        )
+        topView.configure(viewModel: .init(title: title))
     }
     
     func showLogoutAlert() {
-        let logoutAlertAction = AlertAction(title: R.Strings.menu_logout.localized(),
-                                            type: .destructive,
-                                            callback: { [weak self] in
-                                                self?.presenter.logout()
-                                            })
-        let cancelAlertAction = AlertAction(title: R.Strings.menu_logout_cancel.localized(),
-                                            type: .normal,
-                                            callback: {}
+        let logoutAlertAction = AlertAction(
+            title: R.Strings.menu_logout.localized(),
+            type: .destructive,
+            callback: { [weak self] in self?.presenter.logout() }
         )
-        let module = CustomAlertModule(title: R.Strings.menu_logout_title.localized(),
-                                       message: R.Strings.menu_logout_message.localized(),
-                                       actions: [logoutAlertAction, cancelAlertAction])
+        let cancelAlertAction = AlertAction(
+            title: R.Strings.menu_logout_cancel.localized(),
+            type: .normal,
+            callback: {}
+        )
+        let module = CustomAlertModule(
+            title: R.Strings.menu_logout_title.localized(),
+            message: R.Strings.menu_logout_message.localized(),
+            actions: [logoutAlertAction, cancelAlertAction]
+        )
         self.showChild(module: module)
     }
 }

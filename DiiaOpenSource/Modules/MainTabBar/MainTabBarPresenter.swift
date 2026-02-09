@@ -13,15 +13,12 @@ protocol MainTabBarAction: BasePresenter {
 }
 
 private enum TabType {
-    case services(view: UIViewController)
     case documents(view: UIViewController)
     case menu(view: UIViewController)
     case feed(view: UIViewController)
     
     func isSameForAction(_ action: MainTabAction) -> Bool {
         switch self {
-        case .services:
-            return action == .publicService
         case .documents:
             switch action {
             case .documents:
@@ -60,7 +57,6 @@ final class MainTabBarPresenter: NSObject, MainTabBarAction {
         tabs = [
             .feed(view: FeedModule().viewController()),
             .documents(view: DocumentsCollectionModuleFactory.create(holder: self).viewController()),
-            .services(view: PublicServiceCategoriesListModuleFactory.create().viewController()),
             .menu(view: MenuModule().viewController())
         ]
         
@@ -98,12 +94,6 @@ final class MainTabBarPresenter: NSObject, MainTabBarAction {
                 title: R.Strings.main_screen_feed.localized(),
                 selectedIconName: R.image.menuFeedActive.name
             )
-        case .services:
-            return SelectableIconTitleViewModel(
-                iconName: R.image.menuServicesInactive.name,
-                title: R.Strings.main_screen_services.localized(),
-                selectedIconName: R.image.menuServicesActive.name
-            )
         case .documents:
             return SelectableIconTitleViewModel(
                 iconName: R.image.menuDocumentsInactive.name,
@@ -129,9 +119,6 @@ final class MainTabBarPresenter: NSObject, MainTabBarAction {
         
         switch tabs[index] {
         case .feed(let viewController):
-            view.setupCurrentController(viewController)
-            view.setBackground(background: .image(image: R.image.light_background.image))
-        case .services(let viewController):
             view.setupCurrentController(viewController)
             view.setBackground(background: .image(image: R.image.light_background.image))
         case .documents(let viewController):

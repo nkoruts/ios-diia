@@ -17,8 +17,10 @@ class FeedOfflineModeConstructor {
         
         return DSConstructorModel(
             topGroup: [
-                AnyCodable.dictionary([Constants.topGroupKey:
-                                        AnyCodable.fromEncodable(encodable: DSTopGroupOrg(titleGroupMlc: .init(heroText: welcomeTitle)))])
+                AnyCodable.dictionary([
+                    Constants.topGroupKey: AnyCodable.fromEncodable(
+                        encodable: DSTopGroupOrg(titleGroupMlc: .init(heroText: welcomeTitle))
+                    )])
             ],
             body: [
                 AnyCodable.dictionary([Constants.btnGroupKey: AnyCodable.fromEncodable(encodable: buttonGroup)])
@@ -39,7 +41,7 @@ extension FeedOfflineModeConstructor {
         static let tridentIcon = "tridentWhite"
         static let targetIcon = "targetWhite"
         static let failedConnectionIcon = "failedConnection"
-
+        
         static let blackCardAction = "invincibilityPoints"
         static let qrAction = "qr"
         static let dronesAction = "militaryDonation"

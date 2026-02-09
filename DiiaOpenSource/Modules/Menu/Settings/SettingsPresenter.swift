@@ -5,7 +5,7 @@ import DiiaAuthorizationPinCode
 protocol SettingsAction: BasePresenter {
     func onBackTapped()
     func numberOfItems() -> Int
-    func item(at indexPath: IndexPath) -> SettingsViewModel?
+    func item(at indexPath: IndexPath) -> TitleCellViewModel?
 }
 
 final class SettingsPresenter: SettingsAction {
@@ -13,7 +13,7 @@ final class SettingsPresenter: SettingsAction {
     // MARK: - Properties
     unowned var view: SettingsView
     private let settingsManager = SettingsManager.instance
-    private var settings: [SettingsViewModel] = []
+    private var settings: [TitleCellViewModel] = []
     
     // MARK: - Init
     init(view: SettingsView) {
@@ -22,53 +22,21 @@ final class SettingsPresenter: SettingsAction {
     }
     
     private func prepareSettings() {
-        var settings: [SettingsViewModel] = [
-            .titled(
-                vm: TitleCellViewModel(
-                    title: R.Strings.settings_docs_order.localized(),
-                    iconName: R.image.orderIcon.name,
-                    action: { [weak view] in view?.open(module: DocumentsReorderingModule()) }
-                )
+        self.settings = [
+            TitleCellViewModel(
+                title: R.Strings.settings_docs_order.localized(),
+                iconName: R.image.orderIcon.name,
+                action: { [weak view] in view?.open(module: DocumentsReorderingModule()) }
             ),
-            .titled(
-                vm: TitleCellViewModel(
-                    title: R.Strings.menu_change_pin.localized(),
-                    iconName: R.image.menuChangePincode.name,
-                    action: { [weak view] in
-                        view?.open(module: ChangePincodeModule(pinCodeLength: AppConstants.App.defaultPinCodeLength, context: ChangePincodeModuleContext.create()))
-                    }
-                )
+            TitleCellViewModel(
+                title: R.Strings.menu_change_pin.localized(),
+                iconName: R.image.menuChangePincode.name,
+                action: { [weak view] in
+                    view?.open(module: ChangePincodeModule(pinCodeLength: AppConstants.App.defaultPinCodeLength, context: ChangePincodeModuleContext.create()))
+                }
+                
             )
         ]
-        
-        if let biometrySettingsViewModel = prepareBiometrySettingsViewModel() {
-            settings.append(.switched(vm: biometrySettingsViewModel))
-        }
-        
-        self.settings = settings
-    }
-    
-    private func prepareBiometrySettingsViewModel() -> SwitchIconedViewModel? {
-        let biometryText: String
-        let biometryIcon: String
-        
-        switch BiometryHelper.biometricType() {
-        case .face:
-            biometryText = R.Strings.menu_allow_face_id.localized()
-            biometryIcon = R.image.menuFaceID.name
-        case .touch:
-            biometryText = R.Strings.menu_allow_touch_id.localized()
-            biometryIcon = R.image.menuTouchID.name
-        default:
-            return nil
-        }
-        
-        return SwitchIconedViewModel(title: biometryText,
-                               iconName: biometryIcon,
-                               isOn: settingsManager.isBiometryAllowed(),
-                               onSwitch: { [weak self] (isOn) in
-                                   self?.settingsManager.setBiometry(isAllowed: isOn)
-                               })
     }
     
     // MARK: - SettingsAction
@@ -80,7 +48,7 @@ final class SettingsPresenter: SettingsAction {
         return settings.count
     }
     
-    func item(at indexPath: IndexPath) -> SettingsViewModel? {
+    func item(at indexPath: IndexPath) -> TitleCellViewModel? {
         guard settings.indices.contains(indexPath.row) else { return nil }
         
         return settings[indexPath.row]

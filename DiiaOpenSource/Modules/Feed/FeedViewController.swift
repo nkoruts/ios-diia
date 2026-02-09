@@ -40,16 +40,6 @@ final class FeedViewController: UIViewController {
         initialSetup()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        presenter.onViewWillAppear()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        presenter.onViewDidAppear()
-    }
-    
     // MARK: - Private Methods
     private func initialSetup() {
         view.backgroundColor = .clear

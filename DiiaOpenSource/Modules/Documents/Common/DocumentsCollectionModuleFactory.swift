@@ -15,13 +15,21 @@ extension DocumentsCoreNetworkContext {
                         "User-Agent": AppConstants.App.userAgent])
     }
 }
+
+class MockDocumentsLoader: DocumentsLoaderProtocol {
+    func updateIfNeeded() { }
+    func setNeedUpdates() { }
+    func removeListener(listener: DocumentsLoadingListenerProtocol) { }
+    func addListener(listener: DocumentsLoadingListenerProtocol) { }
+}
+
 struct DocumentsCollectionModuleFactory {
     static func create(holder: DocumentCollectionHolderProtocol) -> DocumentsCollectionModule {
         
         let reorderingConfig = DocumentsReorderingConfiguration(createReorderingModule: { DocumentsReorderingModule() },
                                                                 documentsReorderingService: DocumentReorderingService.shared)
         return  .init(context: .init(network: .create(),
-                                     documentsLoader: ServicesProvider.shared.documentsLoader,
+                                     documentsLoader: MockDocumentsLoader(),
                                      docProvider: DocumentsProcessor(),
                                      documentsStackRouterCreate: {
                                         DocumentsStackRouter(docType: $0, docProvider: DocumentsProcessor())

@@ -1,5 +1,4 @@
 import UIKit
-import FirebaseCore
 import DiiaMVPModule
 import DiiaNetwork
 import DiiaCommonTypes
@@ -14,15 +13,6 @@ class AppConfigurator {
             storeHelper.clearAllData()
             UIApplication.shared.applicationIconBadgeNumber = 0
         }
-
-        let mirgateService = MigrationService()
-        mirgateService.migrateIfNeeded()
-        
-        FailableDecodableConfig.errorReporter = CrashlyticsErrorRecorder()
-
-        // Adjusting DiiaNetwork.NetworkConfiguration must precede any work with packages
-        // because they may rely on networking contex
-        configureNetwork()
         
         FontBook.mainFont = AppMainFont()
         FontBook.headingFont = AppHeadingFont()
@@ -34,21 +24,6 @@ class AppConfigurator {
         TemplateHandler.setup(context: .init(router: routingHandler,
                                              deepLink: deepLinkManager,
                                              communicationHelper: URLOpenerImpl()))
-        
-        FirebaseApp.configure()
-    }
-
-    static private func configureNetwork() {
-        let networkConfigurator = NetworkConfiguration.default
-        networkConfigurator.set(serverTrustPolicies: networkConfigurator.activeServerTrustPolicies())
-        networkConfigurator.set(interceptor: AuthorizationInterceptor())
-        if EnvironmentVars.isInDebug {
-            networkConfigurator.set(logger: EnvironmentVars.logger)
-        }
-        networkConfigurator.set(httpStatusCodeHandler: HTTPStatusCodeAdapter())
-        networkConfigurator.set(jsonDecoderConfig: JSONDecoderConfig())
-        networkConfigurator.set(responseErrorHandler: CrashlyticsErrorRecorder())
-        networkConfigurator.set(analyticsHandler: AnaliticsNetworkAdapter())
     }
 }
 

@@ -6,20 +6,19 @@ import DiiaDocumentsCommonTypes
 import DiiaDocumentsCore
 
 class DocumentReorderingService: DocumentReorderingServiceProtocol {
+    // TODO: - REMOVE
+    func synchronizeIfNeeded() {
+        
+    }
+    
 
     static let shared = DocumentReorderingService(store: StoreHelper.instance)
     
     private let store: StoreHelperProtocol
-    private let apiClient = DocumentReorderingAPIClient()
     private let bag = DisposeBag()
     
     private init(store: StoreHelperProtocol) {
         self.store = store
-        
-        ReachabilityHelper.shared
-            .statusSignal
-            .observeNext { [weak self] isReachable in if isReachable { self?.synchronizeIfNeeded() } }
-            .dispose(in: bag)
     }
     
     // MARK: - DocumentReorderingServiceProtocol
@@ -46,7 +45,6 @@ class DocumentReorderingService: DocumentReorderingServiceProtocol {
         guard synchronize else { return }
         store.save(newOrder, type: [DocType].self, forKey: .docsOrderUnsynchronized)
         NotificationCenter.default.post(name: AppConstants.Notifications.documentsWasReordered, object: nil)
-        synchronizeIfNeeded()
     }
     
     func order(for type: DocTypeCode) -> [String] {
@@ -71,51 +69,6 @@ class DocumentReorderingService: DocumentReorderingServiceProtocol {
         store.save(synchronizedOrder, type: [DocType: [String]].self, forKey: .docsStackOrder)
         store.save(unsynchronizedOrder, type: [DocType: [String]].self, forKey: .docsStackOrderUnsynchronized)
         NotificationCenter.default.post(name: AppConstants.Notifications.documentsWasReordered, object: nil)
-        synchronizeIfNeeded()
-    }
-    
-    func synchronizeIfNeeded() {
-        if let order: [DocType] = store.getValue(forKey: .docsOrderUnsynchronized) {
-            apiClient.sendDocumentsOrder(order: order).observe { [weak self] (event) in
-                switch event {
-                case .next:
-                    self?.store.removeValue(forKey: .docsOrderUnsynchronized)
-                case .failed(let err):
-                    log(err)
-                case .completed:
-                    break
-                }
-            }.dispose(in: bag)
-        }
-        
-        if let order: [DocType: [String]] = store.getValue(forKey: .docsStackOrderUnsynchronized) {
-            var needUpdates = false
-            var newStackOrder: [DocType: [String]] = [:]
-            let group = DispatchGroup()
-            newStackOrder = order
-            for type in order.keys {
-                if let unsavedOrder = order[type] {
-                    needUpdates = true
-                    group.enter()
-                    apiClient.sendOrder(order: unsavedOrder, for: type).observe { (event) in
-                        switch event {
-                        case .next:
-                            newStackOrder[type] = nil
-                            group.leave()
-                        case .failed(let err):
-                            log(err)
-                            group.leave()
-                        case .completed:
-                            break
-                        }
-                    }.dispose(in: bag)
-                }
-            }
-            guard needUpdates else { return }
-            group.notify(queue: .main) {
-                self.store.save(newStackOrder, type: [DocType: [String]].self, forKey: .docsStackOrderUnsynchronized)
-            }
-        }
     }
     
     func cleanSynchronized(for type: DocTypeCode) {

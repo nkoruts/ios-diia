@@ -67,11 +67,6 @@ final class DocumentsReorderingPresenter: DocumentsReorderingAction {
     }
     
     private func getDocumentTitle(for document: DocumentModel) -> String {
-        switch document.docType?.docCode {
-        case DocType.driverLicense.docCode, DocType.taxpayerСard.docCode:
-            return document.documentName ?? .empty
-        default:
-            return document.documentName ?? .empty
-        }
+        return document.documentName ?? .empty
     }
 }

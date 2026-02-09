@@ -1,6 +1,4 @@
 import Foundation
-import FirebaseCrashlytics
-import RNCryptor
 import DiiaCommonTypes
 
 struct StoreContainer<T>: Codable where T: Codable {
@@ -21,8 +19,6 @@ enum StoringKey: String, CaseIterable {
     case authPincode = "kKCAuthorizationPincode"
     case logoutToken = "kKCLogoutToken"
     case mobileUID = "kKCMobileUID"
-    
-    case driverLicense = "kDSDriverLicense"
 
     case lastDocumentUpdate = "kUDLastDocumentUpdate"
     
@@ -56,14 +52,11 @@ final class StoreHelper: StoreHelperProtocol {
     private enum StorageType {
         case userDefaults
         case keychain
-        case deviceStorage
         
         init(storingKey: StoringKey) {
             switch storingKey {
             case .authToken, .authPincode, .randomKey, .logoutToken:
                 self = .keychain
-            case .driverLicense:
-                self = .deviceStorage
             default:
                 self = .userDefaults
             }
@@ -85,8 +78,6 @@ final class StoreHelper: StoreHelperProtocol {
                 saveKeychain(data, forKey: key.rawValue)
             case .userDefaults:
                 saveUserDefaults(data: data, key: key.rawValue)
-            case .deviceStorage:
-                saveInStorage(data, withName: key.rawValue)
             }
         } catch let err {
             log(err)
@@ -101,8 +92,6 @@ final class StoreHelper: StoreHelperProtocol {
             data = getKeychain(withKey: key.rawValue)
         case .userDefaults:
             data = getUserDefaultsValue(withKey: key.rawValue)
-        case .deviceStorage:
-            data = getFileInStorage(withName: key.rawValue)
         }
         guard let result = data else { return nil }
         
@@ -118,8 +107,6 @@ final class StoreHelper: StoreHelperProtocol {
         case .userDefaults:
             userDefaults.set(nil, forKey: key.rawValue)
             userDefaults.synchronize()
-        case .deviceStorage:
-            removeItemFromStorage(withName: key.rawValue)
         }
     }
     
@@ -131,8 +118,6 @@ final class StoreHelper: StoreHelperProtocol {
             case .userDefaults:
                 userDefaults.set(nil, forKey: key.rawValue)
                 userDefaults.synchronize()
-            case .deviceStorage:
-                removeItemFromStorage(withName: key.rawValue)
             }
         }
         clearCache()
@@ -144,47 +129,6 @@ final class StoreHelper: StoreHelperProtocol {
 private extension StoreHelper {
     enum Constants {
         static let documentsDirectory = "dsDocuments"
-    }
-    
-    func saveInStorage(_ data: Data?, withName name: String) {
-        do {
-            try createDirectoryIfNeeded()
-        } catch let error as NSError {
-            Crashlytics.crashlytics().record(error: error)
-            log("Could not create directory by reason: \(error.localizedDescription)")
-        }
-        
-        guard let data = data else { return }
-        let cipherText = RNCryptor.encrypt(data: data, withPassword: actualRandomKey())
-        
-        let filePath = filesDirectoryUrl().appendingPathComponent(name)
-        FileManager.default.createFile(atPath: filePath.path, contents: cipherText, attributes: [.protectionKey: FileProtectionType.complete])
-        log("Successfully saved file with name \(name)")
-    }
-    
-    func getFileInStorage(withName name: String) -> Data? {
-        let filePath = filesDirectoryUrl().appendingPathComponent(name)
-        let cipherData = FileManager.default.contents(atPath: filePath.path)
-        if let cipherData = cipherData {
-            do {
-                let originalData = try RNCryptor.decrypt(data: cipherData, withPassword: actualRandomKey())
-                return originalData
-            } catch {
-                Crashlytics.crashlytics().record(error: error)
-                log("Could not load file at directory by reason: \(error.localizedDescription)")
-            }
-        }
-        return nil
-    }
-    
-    func removeItemFromStorage(withName name: String) {
-        let filePath = filesDirectoryUrl().appendingPathComponent(name)
-        do {
-            try FileManager.default.removeItem(at: filePath)
-        } catch let error as NSError {
-            Crashlytics.crashlytics().record(error: error)
-            log("Could not remove file with name: \(name) by reason: \(error.localizedDescription)")
-        }
     }
     
     // Helping methods for File Manager

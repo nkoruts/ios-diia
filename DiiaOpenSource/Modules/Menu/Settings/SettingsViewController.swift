@@ -26,7 +26,6 @@ final class SettingsViewController: UIViewController, SettingsView, Storyboarded
         titleLabel.text = R.Strings.menu_title_settings.localized()
         
         tableView.register(TitleTableCell.nib, forCellReuseIdentifier: TitleTableCell.reuseID)
-        tableView.register(SwitchTableCell.nib, forCellReuseIdentifier: SwitchTableCell.reuseID)
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
         tableView.dataSource = self
@@ -46,22 +45,13 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let settingVM = presenter.item(at: indexPath) else { return UITableViewCell() }
+        guard let settingVM = presenter.item(at: indexPath),
+              let cell = tableView.dequeueReusableCell(withIdentifier: TitleTableCell.reuseID, for: indexPath) as? TitleTableCell
+        else { return UITableViewCell() }
         
-        switch settingVM {
-        case .switched(let vm):
-            if let cell = tableView.dequeueReusableCell(withIdentifier: SwitchTableCell.reuseID, for: indexPath) as? SwitchTableCell {
-                cell.configure(with: vm)
-                return cell
-            }
-        case .titled(let vm):
-            if let cell = tableView.dequeueReusableCell(withIdentifier: TitleTableCell.reuseID, for: indexPath) as? TitleTableCell {
-                cell.configure(viewModel: vm)
-                return cell
-            }
-        }
-        
-        return UITableViewCell()
+        cell.configure(viewModel: settingVM)
+
+        return cell
     }
     
 }
@@ -69,19 +59,6 @@ extension SettingsViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension SettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard let settingVM = presenter.item(at: indexPath) else { return Constants.cellHeight }
-        switch settingVM {
-        case .switched:
-            return Constants.cellHeight
-        case .titled:
-            return UITableView.automaticDimension
-        }
-    }
-}
-
-// MARK: - Constants
-extension SettingsViewController {
-    private enum Constants {
-        static let cellHeight: CGFloat = 65
+        return UITableView.automaticDimension
     }
 }

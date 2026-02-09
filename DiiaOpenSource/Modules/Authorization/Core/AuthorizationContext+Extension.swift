@@ -27,23 +27,10 @@ extension AuthorizationNetworkContext {
     }
 }
 
+// TODO: - REMOVE AnalyticsAuthorizationAdapter
 final class AnalyticsAuthorizationAdapter: AnalyticsAuthorizationHandler {
     
-    func trackSuccessForTarget(target: AuthTarget) {
-        switch target {
-        case .bankId:
-            AnalyticsProvider.track(event: AnalyticEvents.resultLoginByBankId(bankId: target.rawValue, result: .success, extraData: nil))
-        default:
-            break
-        }
-    }
+    func trackSuccessForTarget(target: AuthTarget) { }
     
-    func trackFailForTarget(target: AuthTarget, error: NetworkError) {
-        switch target {
-        case .bankId:
-            AnalyticsProvider.track(event: AnalyticEvents.resultLoginByBankId(bankId: target.rawValue, result: .fail, extraData: error.localizedDescription))
-        default:
-            break
-        }
-    }
+    func trackFailForTarget(target: AuthTarget, error: NetworkError) { }
 }
