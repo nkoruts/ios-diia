@@ -1,13 +1,7 @@
 // MARK: - Accessibility
 "general_accessibility_close" = "Закрити";
 "general_accessibility_back_button_label" = "Назад";
-"auth_accessibility_start_person_data" = "Натисніть щоб ознайомитися з Повідомленням про обробку персональних даних.";
-"auth_accessibility_start_checkmark" = "Активуйте, якщо ви ознайомилися з Повідомленням про обробку персональних даних. Ваша згода активує способи авторизації";
 "main_screen_accessibility_top_qr_scanner_button" = "Відсканувати QR-код";
-"main_screen_accessibility_bottom_bar_cell_active" = "%@ - активна";
-"main_screen_accessibility_bottom_bar_cell_inactive" = "%@ - неактивна";
-"main_screen_accessibility_bottom_bar_cell_tabulation" = "табуляція %@ з %@";
-"main_screen_accessibility_bottom_bar_cell_have_updates" = "Є нові повідомлення";
 
 "documents_accessibility_change_order_label" = "Змінити порядок %@";
 "documents_accessibility_change_order_hint" = "Торкніть двічі і тримайте. Чекайте звук, потім тягніть для зміни порядку.";
@@ -16,28 +10,15 @@
 // MARK: - General
 "general_cancel" = "Скасувати";
 "general_problem_ok" = "Зрозуміло";
-"general_confirm" = "Підтвердити";
-"general_loading" = "Завантаження...";
-"general_template_text_copied" = "%@ скопійовано";
-"general_phone_uuid" = "Номер пристрою";
-"general_app_version" = "Версія Дії: %@";
 
 // MARK: - Authorization
 "authorization_welcome" = "Привіт 👋";
 "authorization_authorization" = "Авторизація";
 
-"authorization_biometry_face_id_title" = "Дозвольте вхід за Face ID";
-"authorization_biometry_face_id_description" = "Дозвольте Face ID, щоб входити до застосунку за скануванням обличчя.";
-
-"authorization_biometry_touch_id_title" = "Дозвольте вхід за Touch ID";
-"authorization_biometry_touch_id_description" = "Дозвольте Touch ID, щоб входити до застосунку за відбитком пальця.";
-
 "authorization_forget" = "Забули код для входу?";
 "authorization_triple_error" = "Ви ввели неправильний код тричі";
 "authorization_repeat" = "Пройдіть повторну авторизацію у застосунку";
 "authorization_authorize" = "Авторизуватися";
-"authorization_info" = "Увійдіть за допомогою BankID Національного банку України, використовуючи свій інтернет-банкінг, або за допомогою NFC-чипу у біометричних документах.";
-"authorization_read_please" = "Для авторизації ознайомтесь зі змістом.";
 "authorization_personal_data_message" = "Повідомлення про обробку персональних даних";
 
 "authorization_enter_pin_title" = "Код для входу";
@@ -45,29 +26,16 @@
 
 "authorization_new_pin_details" = "Цей код ви будете вводити для входу у застосунок Дія.";
 "authorization_repeat_pin_details" = "Переконайтеся, що не помилилися і пам'ятаєте код для входу.";
-"authorization_methods_title" = "Авторизуватись через:";
-"authorization_data_processing_agreement" = "Я ознайомився зі змістом Повідомлення про обробку персональних даних.";
 
 // MARK: - DocumentsGeneral
-"document_general_verification_failure" = "Документ не знайдено";
 "document_reordering_title" = "Змінити порядок";
-"document_general_date_template" = "Дані оновлено %@ о %@";
 "document_reordering_docs_number_small" = "%@ документи";
 "document_reordering_docs_number_big" = "%@ документів";
 
 // MARK: - Menu
-"menu_notifications" = "Повідомлення";
-"menu_diia_id" = "Дія.Підпис";
-"menu_diia_id_history" = "Історія підписань";
-"menu_update" = "Оновити застосунок";
-"menu_active_sessions" = "Підключені пристрої";
-"menu_faq" = "Питання та відповіді";
 "menu_support" = "Служба підтримки";
 "menu_title_settings" = "Налаштування";
 "menu_change_pin" = "Змінити код для входу";
-"menu_allow_touch_id" = "Дозволити Touch ID";
-"menu_allow_face_id" = "Дозволити Face ID";
-"menu_copy_uid" = "Копіювати номер пристрою";
 "menu_logout" = "Вийти";
 "menu_logout_title" = "Хочете вийти із застосунку?";
 "menu_logout_message" = "Для входу буде потрібна повторна авторизація";
@@ -83,7 +51,6 @@
 
 // MARK: - Main
 "main_screen_feed" = "Стрічка";
-"main_screen_services" = "Сервіси";
 "main_screen_menu" = "Меню";
 "main_screen_documents" = "Документи";
 
@@ -101,32 +68,9 @@
 // MARK: - DocumentsCopyRequest
 "doc_copy_title" = "Запит на цифрові\nкопії документів";
 
-// MARK: - DriverLicense
-"driver_document_name" = "Посвідчення\nводія";
-
 // MARK: - User identification
 "user_identification_start_title" = "Підтвердження особи користувача";
 "user_identification_start_details" = "Для захисту ваших персональних даних, Дія один раз на 30 днів буде запитувати підтвердження особи.\n\nДоступ до даних у застосунку можна отримати лише у разі успішного підтвердження. Так ви можете бути впевнені у безпеці своїх даних.\n\nДля підтвердження особи користувача - оберіть спосіб підтвердження та слідуйте підказкам.";
 
-// MARK: - Communication
-"communication_bot_not_available" = "Чат-бот недоступний";
-"communication_messenger_not_installed" = "%@ не встановлений на вашому пристрої";
-
-"communication_wants_open" = "«Дія» хоче відкрити %@";
-"communication_wants_open_named" = "«Дія» хоче відкрити «%@»";
-"communication_open_cancel" = "Скасувати";
-"communication_open_accept" = "Відкрити";
-
-// MARK: - Errors
-"error_no_internet" = "Немає інтернету";
-
 // MARK: - Feed
-"feed_ticker_label" = "Немає інтернету. Перевірте з'єднання";
 "feed_qr_title" = "Сканувати QR-код";
-
-// MARK: - Service
-"services_list_title" = "Сервіси";
-"public_services_search_empty" = "Не знайдено жодної послуги";
-"public_services_search_placeholder" = "Що шукаєте?";
-"public_services_search" = "Пошук";
-"services_unavailable" = "😕\nУ вас немає доступних\nпослуг.";

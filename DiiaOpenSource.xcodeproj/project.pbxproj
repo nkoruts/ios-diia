@@ -91,7 +91,6 @@
 		4937CBAA2D95A7C00014D2BC /* FeedModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4937CB8F2D95A7C00014D2BC /* FeedModule.swift */; };
 		4937CBB02D95AC070014D2BC /* DiiaIdSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4937CBAF2D95AC050014D2BC /* DiiaIdSigner.swift */; };
 		7B7693C62B7AE0380007A89F /* DSImageNameResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7693C52B7AE0380007A89F /* DSImageNameResolver.swift */; };
-		7B7693CF2B7AF9320007A89F /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B7693CE2B7AF9320007A89F /* loader.json */; };
 		7B7693D12B7B02E90007A89F /* DocReorderingCellInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7693D02B7B02E90007A89F /* DocReorderingCellInfoView.swift */; };
 		7B7693D32B7B03250007A89F /* DocumentReorderingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7693D22B7B03250007A89F /* DocumentReorderingCell.swift */; };
 		7B7693D52B7B03560007A89F /* MultipleDocReorderingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7693D42B7B03560007A89F /* MultipleDocReorderingView.swift */; };
@@ -200,7 +199,6 @@
 		4937CB922D95A7C00014D2BC /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		4937CBAF2D95AC050014D2BC /* DiiaIdSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiiaIdSigner.swift; sourceTree = "<group>"; };
 		7B7693C52B7AE0380007A89F /* DSImageNameResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSImageNameResolver.swift; sourceTree = "<group>"; };
-		7B7693CE2B7AF9320007A89F /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		7B7693D02B7B02E90007A89F /* DocReorderingCellInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocReorderingCellInfoView.swift; sourceTree = "<group>"; };
 		7B7693D22B7B03250007A89F /* DocumentReorderingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentReorderingCell.swift; sourceTree = "<group>"; };
 		7B7693D42B7B03560007A89F /* MultipleDocReorderingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleDocReorderingView.swift; sourceTree = "<group>"; };
@@ -605,7 +603,6 @@
 		42F930F429FBF7D10072DDC1 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				7B7693CE2B7AF9320007A89F /* loader.json */,
 				7BD75ADA2B679FCB000D54CA /* splash_cropped.json */,
 				7BD75AD82B678129000D54CA /* background_gradient.json */,
 			);
@@ -869,7 +866,6 @@
 				42F9323029FBF7D20072DDC1 /* SettingsViewController.storyboard in Resources */,
 				42F93A0829FBF7D90072DDC1 /* e-UkraineHead-Regular.otf in Resources */,
 				42F93A0529FBF7D90072DDC1 /* Localizable.strings in Resources */,
-				7B7693CF2B7AF9320007A89F /* loader.json in Resources */,
 				332236042B87927800E6B7AF /* README.md in Resources */,
 				42F9339F29FBF7D30072DDC1 /* MainTabBarViewController.storyboard in Resources */,
 				42F9325829FBF7D20072DDC1 /* MenuViewController.storyboard in Resources */,

@@ -15,10 +15,7 @@ enum DocType: String, Codable, CaseIterable {
     }
     
     var name: String {
-        switch self {
-        case .driverLicense:
-            return R.Strings.driver_document_name.localized()
-        }
+        return ""
     }
 
     var stackName: String {
@@ -30,16 +27,11 @@ enum DocType: String, Codable, CaseIterable {
     }
 
     var faqCategoryId: String {
-        switch self {
-        case .driverLicense: return "driverLicense"
-        }
+        return ""
     }
 
     func storingKey() -> StoringKey? {
-        switch self {
-        case .driverLicense:
-            return nil
-        }
+        return nil
     }
 }
 

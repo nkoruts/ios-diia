@@ -4,12 +4,7 @@ extension R {
     enum image: String {
         // MARK: - Buttons
         case clear
-        case telegram
-        case facebookMessenger
-        case viber
         case menu_back
-        case faceId
-        case fingerprint
         case qrScanner
         case search_light
         
@@ -19,17 +14,8 @@ extension R {
         case light_background
         
         // MARK: - IconsMenu
-        case menuNotifications
-        case menuDiiaID
-        case menuDiiaIDHistory
-        case menuUpdate
-        case menuActiveSessions
-        case menuFaq
         case menuChangePincode
-        case menuFaceID
-        case menuTouchID
         case menuSupport
-        case menuCopyUID
         case menuFeedActive
         case menuFeedInactive
         case menuDocumentsInactive
