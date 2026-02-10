@@ -7,36 +7,15 @@ struct StoreContainer<T>: Codable where T: Codable {
 
 enum StoringKey: String, CaseIterable {
     case hasAppBeenLaunchedBefore = "kUDHasAppBeenLaunchedBefore"
-    case isBiometryEnabled = "kUDSettingsBiometryEnabled"
-    case didUserApproveLinks = "kUDDidUserApproveLinks"
     
     case lastPincodeDate = "kUDLastPincodeDate"
     case incorrectPincodeCount = "kUDIncorrectPincodeCount"
     case incorrectPincodeChangeCount = "kUDIncorrectPincodeChangeCount"
     
-    case randomKey = "kUDRandomKeyPass"
-    case authToken = "kKCAuthorizationToken"
     case authPincode = "kKCAuthorizationPincode"
-    case logoutToken = "kKCLogoutToken"
-    case mobileUID = "kKCMobileUID"
-
-    case lastDocumentUpdate = "kUDLastDocumentUpdate"
     
     case docsOrder = "kUDDocsOrder"
-    case docsOrderUnsynchronized = "kUDDocsOrderUnsynchronized"
     case docsStackOrder = "kUDDocsStackOrder"
-    case docsStackOrderUnsynchronized = "kUDDocsStackOrderUnsynchronized"
-    
-    case publicServiceListCache = "kUDpublicServiceListCache"
-    
-    static var deletableCases: [StoringKey] {
-        return StoringKey.allCases.filter {
-            ![
-                logoutToken,
-                mobileUID
-            ].contains($0)
-        }
-    }
 }
 
 protocol StoreHelperProtocol {
@@ -55,7 +34,7 @@ final class StoreHelper: StoreHelperProtocol {
         
         init(storingKey: StoringKey) {
             switch storingKey {
-            case .authToken, .authPincode, .randomKey, .logoutToken:
+            case .authPincode:
                 self = .keychain
             default:
                 self = .userDefaults
@@ -111,15 +90,6 @@ final class StoreHelper: StoreHelperProtocol {
     }
     
     func clearAllData() {
-        StoringKey.deletableCases.forEach { (key) in
-            switch StorageType(storingKey: key) {
-            case .keychain:
-                saveKeychain(nil, forKey: key.rawValue)
-            case .userDefaults:
-                userDefaults.set(nil, forKey: key.rawValue)
-                userDefaults.synchronize()
-            }
-        }
         clearCache()
     }
 }
@@ -227,23 +197,5 @@ private extension StoreHelper {
         result.setValue(key, forKey: kSecAttrService as String)
         result.setValue(kSecAttrAccessibleAlwaysThisDeviceOnly, forKey: kSecAttrAccessible as String)
         return result
-    }
-}
-
-// MARK: - Helping crypto methods
-private extension StoreHelper {
-    
-    func randomString(length: Int) -> String {
-        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        return String((0..<length).map { _ in letters.randomElement()! }) // swiftlint:disable:this force_unwrapping
-    }
-    
-    func actualRandomKey() -> String {
-        if let randomKey: String = getValue(forKey: .randomKey) {
-            return randomKey
-        }
-        let randomKey = randomString(length: 16)
-        save(randomKey, type: String.self, forKey: .randomKey)
-        return randomKey
     }
 }

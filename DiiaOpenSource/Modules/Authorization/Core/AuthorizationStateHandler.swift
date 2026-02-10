@@ -11,9 +11,7 @@ struct AuthorizationStateHandler: AuthorizationServiceStateHandler {
         self.storage = storage
     }
 
-    func onLoginDidFinish() {
-        StartScenarioService().beginLoginScenarios()
-    }
+    func onLoginDidFinish() { }
     
     func onLogoutDidFinish() {
         storage.clearAllData()

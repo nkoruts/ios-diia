@@ -4,18 +4,19 @@ import DiiaCommonTypes
 import DiiaAuthorization
 import DiiaUIComponents
 
+// TODO: - REMOVE
 struct UserAuthorizationErrorRouter: RouterExtendedProtocol {
 
     private var callback: Callback {{
-        let module = HorizontalActionSheetModule(title: R.Strings.menu_support.localized(),
-                                                 actions: CommunicationHelper.getCommunicationsActions())
+        let module = HorizontalActionSheetModule(title: R.Strings.menu_support.localized(), actions: [])
         AppRouter.instance.currentView()?.showChild(module: module)
     }}
 
+    // TODO: - REMOVE MOBILE UID
     var module: AuthorizationErrorModule {
         AuthorizationErrorModule(
             errorInfo: .userAuth(with: callback),
-            mobileUID: { AppConstants.App.mobileUID },
+            mobileUID: { "" },
             logout: { ServicesProvider.shared.authService.logout() }
         )
     }

@@ -6,6 +6,5 @@ final class ServicesProvider {
 
     let authService: AuthorizationService = .init(context: .create())
 
-    private init() {
-    }
+    private init() { }
 }

@@ -4,8 +4,9 @@ import DiiaAuthorizationPinCode
 struct PinCodeStorage: PinCodeStorageProtocol {
     let storage: StoreHelper
     
+    // TODO: - REMOVE
     func getIsBiometryEnabled() -> Bool? {
-        return storage.getValue(forKey: .isBiometryEnabled)
+        return false
     }
     
     func getIncorrectPincodeAttemptsCount(flow: EnterPinCodeFlow) -> Int? {

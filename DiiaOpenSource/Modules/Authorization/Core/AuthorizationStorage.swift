@@ -1,11 +1,12 @@
 import Foundation
 import DiiaAuthorization
 
+// TODO: - REMOVE UNUSED METHODS
 struct AuthorizationStorage: AuthorizationStorageProtocol {
     let storage: StoreHelper
 
     func getMobileUID() -> String {
-        return AppConstants.App.mobileUID
+        return ""
     }
 
     func getHashedPincode() -> String? {
@@ -17,24 +18,18 @@ struct AuthorizationStorage: AuthorizationStorageProtocol {
     }
 
     func getAuthToken() -> String? {
-        return storage.getValue(forKey: .authToken)
+        return nil
     }
 
-    func saveAuthToken(_ value: String?) {
-        storage.save(value, type: String?.self, forKey: .authToken)
-    }
+    func saveAuthToken(_ value: String?) { }
 
     func getLogoutToken() -> String? {
-        return storage.getValue(forKey: .logoutToken)
+        nil
     }
 
-    func saveLogoutToken(_ value: String) {
-        storage.save(value, type: String.self, forKey: .logoutToken)
-    }
+    func saveLogoutToken(_ value: String) { }
 
-    func removeLogoutToken() {
-        storage.removeValue(forKey: .logoutToken)
-    }
+    func removeLogoutToken() { }
 
     func getLastPincodeDate() -> Date? {
         return storage.getValue(forKey: .lastPincodeDate)

@@ -32,7 +32,11 @@ final class SettingsPresenter: SettingsAction {
                 title: R.Strings.menu_change_pin.localized(),
                 iconName: R.image.menuChangePincode.name,
                 action: { [weak view] in
-                    view?.open(module: ChangePincodeModule(pinCodeLength: AppConstants.App.defaultPinCodeLength, context: ChangePincodeModuleContext.create()))
+                    let module = ChangePincodeModule(
+                        pinCodeLength: AppConstants.defaultPinCodeLength,
+                        context: ChangePincodeModuleContext.create()
+                    )
+                    view?.open(module: module)
                 }
                 
             )

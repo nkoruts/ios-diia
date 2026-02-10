@@ -16,14 +16,14 @@ class AppConfigurator {
         
         FontBook.mainFont = AppMainFont()
         FontBook.headingFont = AppHeadingFont()
-        UIComponentsConfiguration.shared.setup(imageNameProvider: DSImageNameResolver.instance, imageLoader: nil, urlOpener: URLOpenerImpl(), logger: PrintLogger())
 
         let deepLinkManager = DeepLinkManager()
         deepLinkManager.appRouter = AppRouter.instance
         let routingHandler = RoutingHandler(appRouter: AppRouter.instance)
-        TemplateHandler.setup(context: .init(router: routingHandler,
-                                             deepLink: deepLinkManager,
-                                             communicationHelper: URLOpenerImpl()))
+        // TODO: - DiiaCommonSevices: public struct URLOpenerImp
+//        TemplateHandler.setup(context: .init(router: routingHandler,
+//                                             deepLink: deepLinkManager,
+//                                             communicationHelper: URLOpenerImpl()))
     }
 }
 

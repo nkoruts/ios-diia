@@ -25,12 +25,7 @@ final class MenuViewController: UIViewController, Storyboarded {
         view.translatesAutoresizingMaskIntoConstraints = false
         setupButton()
         setupPrivacyLabel()
-        topView.configure(
-            viewModel: .init(
-                title: R.Strings.main_screen_menu.localized(),
-                details: R.Strings.general_app_version.formattedLocalized(arguments: AppConstants.App.appVersion)
-            )
-        )
+        topView.configure(viewModel: .init(title: R.Strings.main_screen_menu.localized()))
         presenter.configureView()
     }
     

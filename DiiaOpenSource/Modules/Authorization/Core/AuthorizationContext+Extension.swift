@@ -16,13 +16,10 @@ extension AuthorizationContext {
 
 extension AuthorizationNetworkContext {
     static func create() -> AuthorizationNetworkContext {
-        .init(session: NetworkConfiguration.default.sessionWithoutInterceptor,
-              host: EnvironmentVars.apiHost,
-              headers: ["App-Version": AppConstants.App.appVersion,
-                        "Platform-Type": AppConstants.App.platform,
-                        "Platform-Version": AppConstants.App.iOSVersion,
-                        "mobile_uid": AppConstants.App.mobileUID,
-                        "User-Agent": AppConstants.App.userAgent]
+        .init(
+            session: NetworkConfiguration.default.sessionWithoutInterceptor,
+            host: EnvironmentVars.apiHost,
+            headers: nil
         )
     }
 }
