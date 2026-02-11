@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		165BBC822F3CCCC500FE1C08 /* DiiaDocuments in Frameworks */ = {isa = PBXBuildFile; productRef = 165BBC812F3CCCC500FE1C08 /* DiiaDocuments */; };
+		165BBC842F3CCCC500FE1C08 /* DiiaDocumentsCommonTypes in Frameworks */ = {isa = PBXBuildFile; productRef = 165BBC832F3CCCC500FE1C08 /* DiiaDocumentsCommonTypes */; };
+		165BBC862F3CCCC500FE1C08 /* DiiaDocumentsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 165BBC852F3CCCC500FE1C08 /* DiiaDocumentsCore */; };
 		16743A142F3A212D006E79D8 /* TitleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16743A132F3A212D006E79D8 /* TitleTableCell.swift */; };
 		16743A192F3A2BBC006E79D8 /* DocumentReorderingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16743A172F3A2BBC006E79D8 /* DocumentReorderingService.swift */; };
 		332236042B87927800E6B7AF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 332236032B87927700E6B7AF /* README.md */; };
@@ -24,8 +27,6 @@
 		339AE8702B5E6CA200C21112 /* DiiaCommonTypes in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE86F2B5E6CA200C21112 /* DiiaCommonTypes */; };
 		339AE8722B5E6CC000C21112 /* DiiaCommonServices in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE8712B5E6CC000C21112 /* DiiaCommonServices */; };
 		339AE8742B5E6CCF00C21112 /* DiiaPublicServices in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE8732B5E6CCF00C21112 /* DiiaPublicServices */; };
-		339AE8782B5E6CE700C21112 /* DiiaDocuments in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE8772B5E6CE700C21112 /* DiiaDocuments */; };
-		339AE87A2B5E6CE700C21112 /* DiiaDocumentsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE8792B5E6CE700C21112 /* DiiaDocumentsCore */; };
 		339AE87C2B5E6CFE00C21112 /* DiiaAuthorization in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE87B2B5E6CFE00C21112 /* DiiaAuthorization */; };
 		339AE87E2B5E6CFE00C21112 /* DiiaAuthorizationMethods in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE87D2B5E6CFE00C21112 /* DiiaAuthorizationMethods */; };
 		339AE8802B5E6CFE00C21112 /* DiiaAuthorizationPinCode in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE87F2B5E6CFE00C21112 /* DiiaAuthorizationPinCode */; };
@@ -234,13 +235,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9487B53F2B76594800571A1D /* Alamofire in Frameworks */,
+				165BBC862F3CCCC500FE1C08 /* DiiaDocumentsCore in Frameworks */,
 				339AE8802B5E6CFE00C21112 /* DiiaAuthorizationPinCode in Frameworks */,
-				339AE87A2B5E6CE700C21112 /* DiiaDocumentsCore in Frameworks */,
 				339AE8722B5E6CC000C21112 /* DiiaCommonServices in Frameworks */,
+				165BBC842F3CCCC500FE1C08 /* DiiaDocumentsCommonTypes in Frameworks */,
 				33C550412B48B6A200E100CD /* Lottie in Frameworks */,
 				9487B5422B765B8600571A1D /* ReactiveKit in Frameworks */,
-				339AE8782B5E6CE700C21112 /* DiiaDocuments in Frameworks */,
 				339AE87C2B5E6CFE00C21112 /* DiiaAuthorization in Frameworks */,
+				165BBC822F3CCCC500FE1C08 /* DiiaDocuments in Frameworks */,
 				339AE8702B5E6CA200C21112 /* DiiaCommonTypes in Frameworks */,
 				339AE86C2B5E6C8500C21112 /* DiiaMVPModule in Frameworks */,
 				339AE86A2B5E6C6100C21112 /* DiiaUIComponents in Frameworks */,
@@ -801,13 +803,14 @@
 				339AE86F2B5E6CA200C21112 /* DiiaCommonTypes */,
 				339AE8712B5E6CC000C21112 /* DiiaCommonServices */,
 				339AE8732B5E6CCF00C21112 /* DiiaPublicServices */,
-				339AE8772B5E6CE700C21112 /* DiiaDocuments */,
-				339AE8792B5E6CE700C21112 /* DiiaDocumentsCore */,
 				339AE87B2B5E6CFE00C21112 /* DiiaAuthorization */,
 				339AE87D2B5E6CFE00C21112 /* DiiaAuthorizationMethods */,
 				339AE87F2B5E6CFE00C21112 /* DiiaAuthorizationPinCode */,
 				9487B53E2B76594800571A1D /* Alamofire */,
 				9487B5412B765B8600571A1D /* ReactiveKit */,
+				165BBC812F3CCCC500FE1C08 /* DiiaDocuments */,
+				165BBC832F3CCCC500FE1C08 /* DiiaDocumentsCommonTypes */,
+				165BBC852F3CCCC500FE1C08 /* DiiaDocumentsCore */,
 			);
 			productName = DiiaSimple;
 			productReference = 42F9229F29FBDC820072DDC1 /* DiiaOpenSource.app */;
@@ -843,11 +846,11 @@
 				7B65C5D32B0368E50018D510 /* XCRemoteSwiftPackageReference "ios-uicomponents" */,
 				7B65C5D42B03699A0018D510 /* XCRemoteSwiftPackageReference "ios-commonservices" */,
 				7B65C5D52B0369CE0018D510 /* XCRemoteSwiftPackageReference "ios-publicservices" */,
-				7BE198FD2B16D851008C9FAC /* XCRemoteSwiftPackageReference "ios-documents" */,
 				33B035282B29BBBB00374227 /* XCRemoteSwiftPackageReference "ios-authorization" */,
 				33C5503F2B48B6A200E100CD /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				9487B53D2B76594800571A1D /* XCRemoteSwiftPackageReference "Alamofire" */,
 				9487B5402B765B8600571A1D /* XCRemoteSwiftPackageReference "ReactiveKit" */,
+				165BBC802F3CCCC500FE1C08 /* XCRemoteSwiftPackageReference "ios-documents" */,
 			);
 			productRefGroup = 42F922A029FBDC820072DDC1 /* Products */;
 			projectDirPath = "";
@@ -1220,6 +1223,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		165BBC802F3CCCC500FE1C08 /* XCRemoteSwiftPackageReference "ios-documents" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nkoruts/ios-documents.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
 		33B035282B29BBBB00374227 /* XCRemoteSwiftPackageReference "ios-authorization" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/diia-open-source/ios-authorization.git";
@@ -1233,7 +1244,7 @@
 			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = 4.2.0;
+				version = 4.6.0;
 			};
 		};
 		42F93A432A0104AA0072DDC1 /* XCRemoteSwiftPackageReference "ios-mvpmodule" */ = {
@@ -1257,7 +1268,7 @@
 			repositoryURL = "https://github.com/diia-open-source/ios-uicomponents.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 1.0.18;
 			};
 		};
 		7B65C5D42B03699A0018D510 /* XCRemoteSwiftPackageReference "ios-commonservices" */ = {
@@ -1271,14 +1282,6 @@
 		7B65C5D52B0369CE0018D510 /* XCRemoteSwiftPackageReference "ios-publicservices" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/diia-open-source/ios-publicservices.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		7BE198FD2B16D851008C9FAC /* XCRemoteSwiftPackageReference "ios-documents" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/diia-open-source/ios-documents.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 1.0.0;
@@ -1303,6 +1306,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		165BBC812F3CCCC500FE1C08 /* DiiaDocuments */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 165BBC802F3CCCC500FE1C08 /* XCRemoteSwiftPackageReference "ios-documents" */;
+			productName = DiiaDocuments;
+		};
+		165BBC832F3CCCC500FE1C08 /* DiiaDocumentsCommonTypes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 165BBC802F3CCCC500FE1C08 /* XCRemoteSwiftPackageReference "ios-documents" */;
+			productName = DiiaDocumentsCommonTypes;
+		};
+		165BBC852F3CCCC500FE1C08 /* DiiaDocumentsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 165BBC802F3CCCC500FE1C08 /* XCRemoteSwiftPackageReference "ios-documents" */;
+			productName = DiiaDocumentsCore;
+		};
 		339AE8692B5E6C6100C21112 /* DiiaUIComponents */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7B65C5D32B0368E50018D510 /* XCRemoteSwiftPackageReference "ios-uicomponents" */;
@@ -1327,16 +1345,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7B65C5D52B0369CE0018D510 /* XCRemoteSwiftPackageReference "ios-publicservices" */;
 			productName = DiiaPublicServices;
-		};
-		339AE8772B5E6CE700C21112 /* DiiaDocuments */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7BE198FD2B16D851008C9FAC /* XCRemoteSwiftPackageReference "ios-documents" */;
-			productName = DiiaDocuments;
-		};
-		339AE8792B5E6CE700C21112 /* DiiaDocumentsCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7BE198FD2B16D851008C9FAC /* XCRemoteSwiftPackageReference "ios-documents" */;
-			productName = DiiaDocumentsCore;
 		};
 		339AE87B2B5E6CFE00C21112 /* DiiaAuthorization */ = {
 			isa = XCSwiftPackageProductDependency;
