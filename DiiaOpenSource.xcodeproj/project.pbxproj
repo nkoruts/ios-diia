@@ -12,6 +12,7 @@
 		165BBC862F3CCCC500FE1C08 /* DiiaDocumentsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 165BBC852F3CCCC500FE1C08 /* DiiaDocumentsCore */; };
 		16743A142F3A212D006E79D8 /* TitleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16743A132F3A212D006E79D8 /* TitleTableCell.swift */; };
 		16743A192F3A2BBC006E79D8 /* DocumentReorderingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16743A172F3A2BBC006E79D8 /* DocumentReorderingService.swift */; };
+		16B2F70D2F3E08590012C8D4 /* EudiWalletKit in Frameworks */ = {isa = PBXBuildFile; productRef = 16B2F70C2F3E08590012C8D4 /* EudiWalletKit */; };
 		332236042B87927800E6B7AF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 332236032B87927700E6B7AF /* README.md */; };
 		3329AF692B29F928004B8517 /* AuthorizationContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3329AF682B29F928004B8517 /* AuthorizationContext+Extension.swift */; };
 		3329AF6B2B29F944004B8517 /* UserAuthorizationErrorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3329AF6A2B29F944004B8517 /* UserAuthorizationErrorRouter.swift */; };
@@ -239,6 +240,7 @@
 				339AE8802B5E6CFE00C21112 /* DiiaAuthorizationPinCode in Frameworks */,
 				339AE8722B5E6CC000C21112 /* DiiaCommonServices in Frameworks */,
 				165BBC842F3CCCC500FE1C08 /* DiiaDocumentsCommonTypes in Frameworks */,
+				16B2F70D2F3E08590012C8D4 /* EudiWalletKit in Frameworks */,
 				33C550412B48B6A200E100CD /* Lottie in Frameworks */,
 				9487B5422B765B8600571A1D /* ReactiveKit in Frameworks */,
 				339AE87C2B5E6CFE00C21112 /* DiiaAuthorization in Frameworks */,
@@ -811,6 +813,7 @@
 				165BBC812F3CCCC500FE1C08 /* DiiaDocuments */,
 				165BBC832F3CCCC500FE1C08 /* DiiaDocumentsCommonTypes */,
 				165BBC852F3CCCC500FE1C08 /* DiiaDocumentsCore */,
+				16B2F70C2F3E08590012C8D4 /* EudiWalletKit */,
 			);
 			productName = DiiaSimple;
 			productReference = 42F9229F29FBDC820072DDC1 /* DiiaOpenSource.app */;
@@ -851,6 +854,7 @@
 				9487B53D2B76594800571A1D /* XCRemoteSwiftPackageReference "Alamofire" */,
 				9487B5402B765B8600571A1D /* XCRemoteSwiftPackageReference "ReactiveKit" */,
 				165BBC802F3CCCC500FE1C08 /* XCRemoteSwiftPackageReference "ios-documents" */,
+				16B2F70B2F3E08590012C8D4 /* XCRemoteSwiftPackageReference "eudi-lib-ios-wallet-kit" */,
 			);
 			productRefGroup = 42F922A029FBDC820072DDC1 /* Products */;
 			projectDirPath = "";
@@ -1231,6 +1235,14 @@
 				kind = branch;
 			};
 		};
+		16B2F70B2F3E08590012C8D4 /* XCRemoteSwiftPackageReference "eudi-lib-ios-wallet-kit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/eu-digital-identity-wallet/eudi-lib-ios-wallet-kit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.20.0;
+			};
+		};
 		33B035282B29BBBB00374227 /* XCRemoteSwiftPackageReference "ios-authorization" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/diia-open-source/ios-authorization.git";
@@ -1320,6 +1332,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 165BBC802F3CCCC500FE1C08 /* XCRemoteSwiftPackageReference "ios-documents" */;
 			productName = DiiaDocumentsCore;
+		};
+		16B2F70C2F3E08590012C8D4 /* EudiWalletKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16B2F70B2F3E08590012C8D4 /* XCRemoteSwiftPackageReference "eudi-lib-ios-wallet-kit" */;
+			productName = EudiWalletKit;
 		};
 		339AE8692B5E6C6100C21112 /* DiiaUIComponents */ = {
 			isa = XCSwiftPackageProductDependency;
