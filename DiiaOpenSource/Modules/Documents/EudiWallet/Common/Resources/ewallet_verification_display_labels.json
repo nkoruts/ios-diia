@@ -1,0 +1,206 @@
+{
+    "PID": {
+        "family_name": {
+            "sharingENDisplayLabel": "Family name",
+            "sharingUADisplayLabel": "Прізвище"
+        },
+        "given_name": {
+            "sharingENDisplayLabel": "Given name",
+            "sharingUADisplayLabel": "Імʼя"
+        },
+        "family_name_birth": {
+            "sharingENDisplayLabel": "Surname at birth",
+            "sharingUADisplayLabel": "Прізвище при народженні"
+        },
+        "given_name_birth": {
+            "sharingENDisplayLabel": "Name at birth",
+            "sharingUADisplayLabel": "Імʼя при народженні"
+        },
+        "birth_date": {
+            "sharingENDisplayLabel": "Birth date",
+            "sharingUADisplayLabel": "Дата народження"
+        },
+        "age_over_18": {
+            "sharingENDisplayLabel": "Age over 18",
+            "sharingUADisplayLabel": "Більше 18 років"
+        },
+        "resident_address": {
+            "sharingENDisplayLabel": "Resident address",
+            "sharingUADisplayLabel": "Адреса проживання"
+        },
+        "resident_country": {
+            "sharingENDisplayLabel": "Resident country",
+            "sharingUADisplayLabel": "Країна проживання"
+        },
+        "resident_state": {
+            "sharingENDisplayLabel": "Region of residence",
+            "sharingUADisplayLabel": "Область"
+        },
+        "resident_city": {
+            "sharingENDisplayLabel": "Settlement of residence",
+            "sharingUADisplayLabel": "Населений пункт"
+        },
+        "resident_postal_code": {
+            "sharingENDisplayLabel": "Resident postal code",
+            "sharingUADisplayLabel": "Поштовий індекс"
+        },
+        "resident_street": {
+            "sharingENDisplayLabel": "Resident street",
+            "sharingUADisplayLabel": "Вулиця"
+        },
+        "resident_house_number": {
+            "sharingENDisplayLabel": "Resident house number",
+            "sharingUADisplayLabel": "Номер будинку"
+        },
+        "gender": {
+            "sharingENDisplayLabel": "Gender",
+            "sharingUADisplayLabel": "Гендер"
+        },
+        "birth_place": {
+            "sharingENDisplayLabel": "Birth place",
+            "sharingUADisplayLabel": "Місце народження"
+        },
+        "birth_country": {
+            "sharingENDisplayLabel": "Birth country",
+            "sharingUADisplayLabel": "Країна народження"
+        },
+        "birth_state": {
+            "sharingENDisplayLabel": "Region of birth",
+            "sharingUADisplayLabel": "Область народження"
+        },
+        "birth_city": {
+            "sharingENDisplayLabel": "Settlement of birth",
+            "sharingUADisplayLabel": "Населений пункт народження"
+        },
+        "nationality": {
+            "sharingENDisplayLabel": "Nationality",
+            "sharingUADisplayLabel": "Національність"
+        },
+        "signature": {
+            "sharingENDisplayLabel": "Signature",
+            "sharingUADisplayLabel": "Підпис"
+        },
+        "portrait": {
+            "sharingENDisplayLabel": "Portrait",
+            "sharingUADisplayLabel": "Фото"
+        },
+        "issuance_date": {
+            "sharingENDisplayLabel": "Issuance date",
+            "sharingUADisplayLabel": "Дата видачі документа"
+        },
+        "expiry_date": {
+            "sharingENDisplayLabel": "Expiration date",
+            "sharingUADisplayLabel": "Дійсний до"
+        },
+        "issuing_authority": {
+            "sharingENDisplayLabel": "Issuing authority",
+            "sharingUADisplayLabel": "Орган, що видав"
+        },
+        "issuing_country": {
+            "sharingENDisplayLabel": "Issuing country",
+            "sharingUADisplayLabel": "Країна, яка видала"
+        }
+    },
+    "mDL": {
+        "family_name": {
+            "sharingENDisplayLabel": "Family name",
+            "sharingUADisplayLabel": "Прізвище"
+        },
+        "given_name": {
+            "sharingENDisplayLabel": "Given name",
+            "sharingUADisplayLabel": "Імʼя"
+        },
+        "family_name_birth": {
+            "sharingENDisplayLabel": "Surname at birth",
+            "sharingUADisplayLabel": "Прізвище при народженні"
+        },
+        "given_name_birth": {
+            "sharingENDisplayLabel": "Name at birth",
+            "sharingUADisplayLabel": "Імʼя при народженні"
+        },
+        "birth_date": {
+            "sharingENDisplayLabel": "Birth date",
+            "sharingUADisplayLabel": "Дата народження"
+        },
+        "age_over_18": {
+            "sharingENDisplayLabel": "Age over 18",
+            "sharingUADisplayLabel": "Більше 18 років"
+        },
+        "resident_address": {
+            "sharingENDisplayLabel": "Resident address",
+            "sharingUADisplayLabel": "Адреса проживання"
+        },
+        "resident_country": {
+            "sharingENDisplayLabel": "Resident country",
+            "sharingUADisplayLabel": "Країна проживання"
+        },
+        "resident_state": {
+            "sharingENDisplayLabel": "Region of residence",
+            "sharingUADisplayLabel": "Область"
+        },
+        "resident_city": {
+            "sharingENDisplayLabel": "Settlement of residence",
+            "sharingUADisplayLabel": "Населений пункт"
+        },
+        "resident_postal_code": {
+            "sharingENDisplayLabel": "Resident postal code",
+            "sharingUADisplayLabel": "Поштовий індекс"
+        },
+        "resident_street": {
+            "sharingENDisplayLabel": "Resident street",
+            "sharingUADisplayLabel": "Вулиця"
+        },
+        "resident_house_number": {
+            "sharingENDisplayLabel": "Resident house number",
+            "sharingUADisplayLabel": "Номер будинку"
+        },
+        "gender": {
+            "sharingENDisplayLabel": "Gender",
+            "sharingUADisplayLabel": "Гендер"
+        },
+        "birth_place": {
+            "sharingENDisplayLabel": "Birth place",
+            "sharingUADisplayLabel": "Місце народження"
+        },
+        "birth_country": {
+            "sharingENDisplayLabel": "Birth country",
+            "sharingUADisplayLabel": "Країна народження"
+        },
+        "birth_state": {
+            "sharingENDisplayLabel": "Region of birth",
+            "sharingUADisplayLabel": "Область народження"
+        },
+        "birth_city": {
+            "sharingENDisplayLabel": "Settlement of birth",
+            "sharingUADisplayLabel": "Населений пункт народження"
+        },
+        "nationality": {
+            "sharingENDisplayLabel": "Nationality",
+            "sharingUADisplayLabel": "Національність"
+        },
+        "signature": {
+            "sharingENDisplayLabel": "Signature",
+            "sharingUADisplayLabel": "Підпис"
+        },
+        "portrait": {
+            "sharingENDisplayLabel": "Portrait",
+            "sharingUADisplayLabel": "Фото"
+        },
+        "issuance_date": {
+            "sharingENDisplayLabel": "Issuance date",
+            "sharingUADisplayLabel": "Дата видачі документа"
+        },
+        "expiry_date": {
+            "sharingENDisplayLabel": "Expiration date",
+            "sharingUADisplayLabel": "Дійсний до"
+        },
+        "issuing_authority": {
+            "sharingENDisplayLabel": "Issuing authority",
+            "sharingUADisplayLabel": "Орган, що видав"
+        },
+        "issuing_country": {
+            "sharingENDisplayLabel": "Issuing country",
+            "sharingUADisplayLabel": "Країна, яка видала"
+        }
+    }
+}
