@@ -4,26 +4,11 @@ import DiiaAuthorizationPinCode
 struct PinCodeStorage: PinCodeStorageProtocol {
     let storage: StoreHelper
     
-    // TODO: - REMOVE
-    func getIsBiometryEnabled() -> Bool? {
-        return false
+    func getIncorrectPincodeAttemptsCount() -> Int? {
+        return storage.getValue(forKey: .incorrectPincodeCount)
     }
     
-    func getIncorrectPincodeAttemptsCount(flow: EnterPinCodeFlow) -> Int? {
-        switch flow {
-        case .auth:
-            return storage.getValue(forKey: .incorrectPincodeCount)
-        case .diiaId:
-            return nil
-        }
-    }
-    
-    func saveIncorrectPincodeAttemptsCount(_ value: Int, flow: EnterPinCodeFlow) {
-        switch flow {
-        case .auth:
-            storage.save(value, type: Int.self, forKey: .incorrectPincodeCount)
-        case .diiaId:
-            break
-        }
+    func saveIncorrectPincodeAttemptsCount(_ value: Int) {
+        storage.save(value, type: Int.self, forKey: .incorrectPincodeCount)
     }
 }

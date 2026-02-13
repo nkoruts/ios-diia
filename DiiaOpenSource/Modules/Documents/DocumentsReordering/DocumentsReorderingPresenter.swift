@@ -19,7 +19,7 @@ final class DocumentsReorderingPresenter: DocumentsReorderingAction {
     init(view: DocumentsReorderingView) {
         self.view = view
         self.orderService = DocumentReorderingService.shared
-        self.documents = DocumentsProcessor().documents(with: orderService.docTypesOrder(), actionView: nil)
+        self.documents = DocumentsProcessor.instance.documents(with: orderService.docTypesOrder(), actionView: nil)
     }
 
     // MARK: - Public Methods

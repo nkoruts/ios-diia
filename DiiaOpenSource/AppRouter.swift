@@ -69,8 +69,7 @@ class AppRouter {
                 })
             }
             let pincodeView = EnterPinCodeModule(
-                context: EnterPinCodeModuleContext.create(flow: .auth, completionHandler: completion),
-                flow: .auth,
+                context: EnterPinCodeModuleContext.create(completionHandler: completion),
                 viewModel: .auth
             ).viewController()
             self.pincodeView = pincodeView
@@ -96,9 +95,9 @@ class AppRouter {
             self.pincodeContainer = nil
             self.didFinishStartingWithPincode = true
         }
-        let module = EnterPinCodeInContainerModule(context: EnterPinCodeModuleContext.create(flow: .auth, completionHandler: completion),
-                                                   flow: .auth,
-                                                   viewModel: .auth)
+        let module = EnterPinCodeInContainerModule(
+            context: EnterPinCodeModuleContext.create(completionHandler: completion),
+            viewModel: .auth)
         currentView()?.showChild(module: module)
         pincodeContainer = module.viewController() as? ChildContainerViewController
     }

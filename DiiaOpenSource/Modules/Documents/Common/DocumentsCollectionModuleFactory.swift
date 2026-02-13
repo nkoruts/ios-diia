@@ -14,7 +14,6 @@ extension DocumentsCoreNetworkContext {
     }
 }
 
-// TODO: - CLEAR CONTEXT
 struct DocumentsCollectionModuleFactory {
     static func create(holder: DocumentCollectionHolderProtocol) -> DocumentsCollectionModule {
         
@@ -24,9 +23,9 @@ struct DocumentsCollectionModuleFactory {
         )
     
         return  .init(context: .init(
-            docProvider: DocumentsProcessor(),
+            docProvider: DocumentsProcessor.instance,
             documentsStackRouterCreate: {
-                DocumentsStackRouter(docType: $0, docProvider: DocumentsProcessor())
+                DocumentsStackRouter(docType: $0, docProvider: DocumentsProcessor.instance)
             },
             documentsReorderingConfiguration: reorderingConfig,
             imageNameProvider: DSImageNameResolver.instance,

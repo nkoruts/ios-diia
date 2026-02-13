@@ -3,19 +3,29 @@ import DiiaDocumentsCommonTypes
 
 enum DocType: String, Codable, CaseIterable {
     // TODO: - REMOVE
-    case driverLicense = "driver-license"
+    case pidDocument = "PID"
+    case mdlDocument = "mDL"
+    case corDocument = "COR"
 
     init?(rawValue: String) {
         switch rawValue {
-        case "driver-license", "driverLicense":
-            self = .driverLicense
+        case "PID":
+            self = .pidDocument
+        case "mDL":
+            self = .mdlDocument
+        case "COR":
+            self = .corDocument
         default:
             return nil
         }
     }
     
     var name: String {
-        return ""
+        switch self {
+        case .pidDocument: R.Strings.pid_document_name.localized()
+        case .mdlDocument: R.Strings.mdl_document_name.localized()
+        case .corDocument: R.Strings.cor_document_name.localized()
+        }
     }
 
     var stackName: String {
@@ -27,11 +37,19 @@ enum DocType: String, Codable, CaseIterable {
     }
 
     var faqCategoryId: String {
-        return ""
+        switch self {
+        case .pidDocument: "pid"
+        case .mdlDocument: "mdl"
+        case .corDocument: "cor"
+        }
     }
 
     func storingKey() -> StoringKey? {
-        return nil
+        switch self {
+        case .pidDocument: .pidDocument
+        case .mdlDocument: .mdlDocument
+        case .corDocument: .corDocument
+        }
     }
 }
 

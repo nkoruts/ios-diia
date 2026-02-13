@@ -1,9 +1,5 @@
 //
 //  EudiWalletRemoteSessionManager.swift
-//  Diia
-//
-//  Created by Nikita Koruts on 02.12.2024.
-//  Copyright © 2024 Diia. All rights reserved.
 //
 
 import Combine

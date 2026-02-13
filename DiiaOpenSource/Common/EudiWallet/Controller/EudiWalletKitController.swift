@@ -1,9 +1,5 @@
 //
 //  EudiWalletKitController.swift
-//  Diia
-//
-//  Created by Nikita Koruts on 28.10.2024.
-//  Copyright © 2024 Diia. All rights reserved.
 //
 
 import Foundation
@@ -34,7 +30,6 @@ final class EudiWalletKitController: EudiWalletKitProtocol {
     
     private let configLogic: EudiWalletKitConfig
     private let wallet: EudiWallet
-    private lazy var credentialsIssuer = EudiWalletCredentialsIssuer()
     
     public var isStorageEmpty: Bool {
         return wallet.storage.docModels.isEmpty
@@ -48,11 +43,17 @@ final class EudiWalletKitController: EudiWalletKitProtocol {
     private init(configLogic: EudiWalletKitConfig = EudiWalletKitConfig()) {
         self.configLogic = configLogic
         guard let walletKit = try? EudiWallet(
-            serviceName: configLogic.serviceName,
-            trustedReaderCertificates: configLogic.trustedCerts,
-            userAuthenticationRequired: configLogic.userAuthenticationRequired,
+            eudiWalletConfig: EudiWalletConfiguration(
+                serviceName: configLogic.serviceName,
+                accessGroup: <#T##String?#>,
+                userAuthenticationRequired: configLogic.userAuthenticationRequired,
+                trustedReaderCertificates: configLogic.trustedCerts,
+                deviceAuthMethod: <#T##DeviceAuthMethod#>,
+                uiCulture: <#T##String?#>,
+                logFileName: <#T##String?#>
+            ),
             openID4VpConfig: configLogic.vpConfig,
-            openID4VciConfigurations: configLogic.vciConfig
+            openID4VciConfigurations: configLogic.vciConfig,
         ) else { fatalError("Unable to Initialize WalletKit") }
         wallet = walletKit
     }
@@ -115,7 +116,7 @@ final class EudiWalletKitController: EudiWalletKitProtocol {
     }
     
     public func deleteDocuments(with docType: String) async throws {
-        return try await wallet.deleteDocuments(docType: docType)
+        return try await wallet.storage.deleteDocuments(docType: docType)
     }
     
     public func deleteDocument(with id: String) async throws {

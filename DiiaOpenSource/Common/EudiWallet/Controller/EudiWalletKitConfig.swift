@@ -1,9 +1,5 @@
 //
 //  EudiWalletKitConfig.swift
-//  Diia
-//
-//  Created by Nikita Koruts on 28.10.2024.
-//  Copyright © 2024 Diia. All rights reserved.
 //
 
 import Foundation

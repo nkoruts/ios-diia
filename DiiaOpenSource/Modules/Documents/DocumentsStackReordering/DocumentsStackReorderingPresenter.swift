@@ -24,7 +24,7 @@ final class DocumentsStackReorderingPresenter: DocumentsStackReorderingAction {
         self.view = view
         self.orderService = DocumentReorderingService.shared
         self.docType = docType
-        self.documents = DocumentsProcessor()
+        self.documents = DocumentsProcessor.instance
             .documents(with: [docType.docCode], actionView: nil)
             .flatMap { $0.getValues() }
         self.initialOrder = documents.compactMap { $0.orderIdentifier }

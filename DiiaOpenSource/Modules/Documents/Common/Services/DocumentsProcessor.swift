@@ -1,25 +1,42 @@
-import UIKit
+import Foundation
 import DiiaMVPModule
 import DiiaCommonTypes
 import DiiaDocumentsCommonTypes
+import DiiaDocuments
 import DiiaDocumentsCore
 
 class DocumentsProcessor {
-    private let storeHelper: StoreHelperProtocol
+    static let instance = DocumentsProcessor(documentProviders: [
+        PidDocumentProvider(),
+        MdlDocumentProvider(),
+        CorDocumentProvider()
+    ])
+
+    public let documentsProviders: [String: DocumentModelProvider]
     
-    init(storeHelper: StoreHelperProtocol = StoreHelper.instance) {
-        self.storeHelper = storeHelper
+    init(documentProviders: [DocumentModelProvider]) {
+        self.documentsProviders = Dictionary(documentProviders.map { ($0.docCode, $0) }) { _, last in last }
+        documentProviders.forEach { $0.migrateIfNeeded() }
     }
     
     func documents(with order: [DocTypeCode], actionView: BaseView?) -> [MultiDataType<DocumentModel>] {
-        
-        let docTypesOrder: [DocType] = order.compactMap({ DocType(rawValue: $0)})
-        
-        let documents = docTypesOrder.compactMap { docType -> MultiDataType<DocumentModel>? in
-            return nil
+        var allDocuments: [MultiDataType<DocumentModel>] = []
+        for docCode in order {
+            if let docProvider = documentsProviders[docCode] {
+                let docs = reorderIfNeeded(
+                    documents: docProvider.getStoredDocuments(actionView: actionView),
+                    orderIds: DocumentReorderingService.shared.order(for: docCode))
+                if let cards = makeMultiple(cards: docs) {
+                    allDocuments.append(cards)
+                }
+            }
         }
         
-        return documents
+        return allDocuments
+    }
+    
+    func refreshDocumentFromStorage(type: DocTypeCode) {
+        documentsProviders[type]?.refreshFromStorage()
     }
     
     private func makeMultiple(cards: [DocumentModel]) -> MultiDataType<DocumentModel>? {
@@ -45,13 +62,6 @@ class DocumentsProcessor {
         }
         return documents
     }
-//    
-//    private func processDriverLicenses(licenses: DSFullDocumentModel?) -> [DocumentModel] {
-//        let documents: [DocumentModel] = licenses?.data.filter({ $0.docData.validUntil == nil }).map {
-//            return DriverLicenseViewModelFactory().createViewModel(model: $0)
-//        } ?? []
-//        return reorderIfNeeded(documents: documents, orderIds: DocumentReorderingService.shared.order(for: DocType.driverLicense.rawValue))
-//    }
 }
 
 extension DocumentsProcessor: DocumentsProvider { }

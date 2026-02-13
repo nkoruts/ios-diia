@@ -86,6 +86,11 @@ enum R {
         case public_services_search
         case services_unavailable
         
+        // MARK: - Documents
+        case pid_document_name
+        case mdl_document_name
+        case cor_document_name
+        
         func localized() -> String {
             let localized = NSLocalizedString(rawValue, bundle: Bundle.main, comment: "")
             return localized

@@ -7,15 +7,17 @@ struct StoreContainer<T>: Codable where T: Codable {
 
 enum StoringKey: String, CaseIterable {
     case hasAppBeenLaunchedBefore = "kUDHasAppBeenLaunchedBefore"
-    
     case lastPincodeDate = "kUDLastPincodeDate"
     case incorrectPincodeCount = "kUDIncorrectPincodeCount"
     case incorrectPincodeChangeCount = "kUDIncorrectPincodeChangeCount"
-    
     case authPincode = "kKCAuthorizationPincode"
-    
     case docsOrder = "kUDDocsOrder"
     case docsStackOrder = "kUDDocsStackOrder"
+    case didUserApproveLinks = "kUDDidUserApproveLinks"
+    
+    case pidDocument = "kDSPIDDocument"
+    case mdlDocument = "kDSmDLDocument"
+    case corDocument = "kDSCORDocument"
 }
 
 protocol StoreHelperProtocol {

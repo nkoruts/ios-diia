@@ -74,3 +74,8 @@
 
 // MARK: - Feed
 "feed_qr_title" = "Сканувати QR-код";
+
+// MARK: - Documents
+"pid_document_name" = "National ID of Ukraine";
+"mdl_document_name" = "International Drivers Licence";
+"cor_document_name" = "Certificate of Residence";

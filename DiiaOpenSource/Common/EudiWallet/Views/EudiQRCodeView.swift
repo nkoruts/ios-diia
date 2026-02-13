@@ -1,9 +1,5 @@
 //
 //  EudiQRCodeView.swift
-//  Diia
-//
-//  Created by Nikita Koruts on 29.11.2024.
-//  Copyright © 2024 Diia. All rights reserved.
 //
 
 import UIKit

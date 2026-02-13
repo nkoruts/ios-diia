@@ -4,19 +4,12 @@ import DiiaMVPModule
 
 extension EnterPinCodeModuleContext {
 
-    static func create(flow: EnterPinCodeFlow, completionHandler: @escaping (Result<String, Error>) -> Void) -> EnterPinCodeModuleContext {
-
-        let delegate: EnterPinCodeDelegate
-        switch flow {
-        case .auth:
-            delegate = EnterPinCodeAuthDelegate(completionHandler: completionHandler)
-        case .diiaId:
-            // this is a just context initializator demand, must never be called for DiiaOpenSource once it doesn't use diiaId
-            delegate = EnterPinCodeDefaultDelegate(completionHandler: completionHandler)
-        }
-        
-        return EnterPinCodeModuleContext(storage: PinCodeStorage(storage: StoreHelper.instance),
-                                         enterPinCodeDelegate: delegate)
+    static func create(completionHandler: @escaping (Result<String, Error>) -> Void) -> EnterPinCodeModuleContext {
+        let delegate: EnterPinCodeDelegate = EnterPinCodeAuthDelegate(completionHandler: completionHandler)
+        return EnterPinCodeModuleContext(
+            storage: PinCodeStorage(storage: StoreHelper.instance),
+            enterPinCodeDelegate: delegate
+        )
     }
 }
 
