@@ -5,20 +5,15 @@ import DiiaUIComponents
 import DiiaCommonTypes
 
 protocol FeedView: BaseView {
-    func setLoadingState(_ state: LoadingState)
     func configure(with model: DSConstructorModel)
-    func isVisible() -> Bool
-    func setTickerText(_ text: String?)
 }
 
 final class FeedViewController: UIViewController {
     
     // MARK: - Outlets
-    @IBOutlet private weak var contentView: ContentLoadingView!
     @IBOutlet private weak var topNavigationView: TopNavigationBigView!
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var bodyGroupStackView: UIStackView!
-    @IBOutlet private weak var floatingTextLabel: FloatingTextLabel!
     
     // MARK: - Properties
     var presenter: FeedAction!
@@ -43,7 +38,6 @@ final class FeedViewController: UIViewController {
     // MARK: - Private Methods
     private func initialSetup() {
         view.backgroundColor = .clear
-        floatingTextLabel.isHidden = true
     }
 }
 
@@ -65,31 +59,9 @@ extension FeedViewController: FeedView {
         
         bodyGroupStackView.safelyRemoveArrangedSubviews()
         bodyGroupStackView.addArrangedSubviews(
-            DSViewFabric.instance.bodyViews(for: model,
-                                            eventHandler: { [weak self] event in
-                                                self?.presenter.handleEvent(event: event)
-                                            })
+            DSViewFabric.instance.bodyViews(for: model) { [weak self] event in
+                self?.presenter.handleEvent(event: event)
+            }
         )
-    }
-    
-    func setTickerText(_ text: String?) {
-        floatingTextLabel.reset()
-        floatingTextLabel.isHidden = text == nil
-        floatingTextLabel.labelText = text
-        
-        if text != nil {
-            floatingTextLabel.animate()
-        } else {
-            floatingTextLabel.stopAnimation()
-        }
-    }
-    
-    func setLoadingState(_ state: LoadingState) {
-        contentView.isHidden = state == .ready
-        contentView.setLoadingState(state)
-    }
-    
-    func isVisible() -> Bool {
-        return view.window != nil
     }
 }

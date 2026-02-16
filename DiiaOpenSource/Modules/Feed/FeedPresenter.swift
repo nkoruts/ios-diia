@@ -1,7 +1,5 @@
 
 import UIKit
-import ReactiveKit
-import DiiaNetwork
 import DiiaMVPModule
 import DiiaUIComponents
 import DiiaCommonServices
@@ -17,11 +15,8 @@ final class FeedPresenter: FeedAction {
     unowned var view: FeedView
     
     private let qrHelper: DiiaQRScannerHelper
-    private let bag = DisposeBag()
     
     private var response: DSConstructorModel?
-    private var isFetching = false
-    private var needUpdates = true
     
     // MARK: - Init
     init(view: FeedView) {
@@ -36,12 +31,8 @@ final class FeedPresenter: FeedAction {
     }
     
     func handleEvent(event: ConstructorItemEvent) {
-        switch event {
-        default:
-            if let parameters = event.actionParameters() {
-                handleAction(actionModel: parameters)
-            }
-        }
+        guard let parameters = event.actionParameters() else { return }
+        handleAction(actionModel: parameters)
     }
     
     func handleAction(actionModel: DSActionParameter) {
@@ -56,33 +47,11 @@ final class FeedPresenter: FeedAction {
             break
         }
     }
-    
-    // MARK: - Private Methods
-    private func setOfflineMode() {
-        guard response == nil else { return }
-
-        let offlineModel = FeedOfflineModeConstructor.buildOfflineModel()
-        view.configure(with: offlineModel)
-    }
-    
-    // MARK: - Handlers
-    private func handleError(error: NetworkError, retryAction: @escaping Callback) {
-        GeneralErrorsHandler.process(
-            error: .init(networkError: error),
-            with: retryAction,
-            didRetry: false,
-            in: view
-        )
-    }
 }
 
 // MARK: - Constants
 extension FeedPresenter {
     private enum Constants {
-        static let messagesAction = "allMessages"
-        static let newsAction = "allNews"
-        static let newsDetailsAction = "news"
         static let qrAction = "qr"
-        static let tickerText = Array(repeating: R.Strings.feed_ticker_label.localized(), count: 3).joined(separator: " • ")
     }
 }

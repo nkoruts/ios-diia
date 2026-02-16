@@ -5,7 +5,7 @@ import DiiaCommonTypes
 
 class FeedOfflineModeConstructor {
     static func buildOfflineModel() -> DSConstructorModel {
-        var welcomeTitle = R.Strings.authorization_welcome.localized()
+        let welcomeTitle = R.Strings.authorization_welcome.localized()
         
         let buttonGroup = DSButtonIconRoundedGroupModel(
             items: [

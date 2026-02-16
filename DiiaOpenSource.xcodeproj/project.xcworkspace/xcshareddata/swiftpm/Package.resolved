@@ -1,5 +1,5 @@
 {
-  "originHash" : "e715538bccb5555ed0c236932bf440e1623c3aee52905d2d8945ae3df7bab122",
+  "originHash" : "67576d8ac1d0f9a8895ef59d4d9916cb0511d3576fde3ca14ed0ec0683b7d9c2",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -60,8 +60,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/eu-digital-identity-wallet/eudi-lib-ios-openid4vci-swift.git",
       "state" : {
-        "revision" : "f08783f37364bb300ee32182fd0b7dfc9c29dfd4",
-        "version" : "0.20.0"
+        "revision" : "d38e3e81c16609cbe6dd65cd44b9203e0ed7f495",
+        "version" : "0.19.2"
       }
     },
     {
@@ -69,8 +69,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/eu-digital-identity-wallet/eudi-lib-ios-openid4vp-swift.git",
       "state" : {
-        "revision" : "e616e07b0d9fd11ca5da09e66b26e09d71096a02",
-        "version" : "0.20.0"
+        "revision" : "f4bbea4288043b71d054432f17a36faaed74072e",
+        "version" : "0.19.0"
       }
     },
     {
@@ -87,8 +87,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/eu-digital-identity-wallet/eudi-lib-ios-wallet-kit.git",
       "state" : {
-        "revision" : "c33962d224a5b5fbd1dec5f0a8fbd8996a5aa1da",
-        "version" : "0.20.0"
+        "revision" : "8b9b387fc483af6504d97c2ae83880fb7457d60a",
+        "version" : "0.19.4"
       }
     },
     {
@@ -105,35 +105,35 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/eu-digital-identity-wallet/eudi-lib-sdjwt-swift.git",
       "state" : {
-        "revision" : "a55fbaa6417881e9409306d0d9405ca20bf64147",
-        "version" : "0.13.0"
+        "revision" : "77b21c50fdc5aa2abe9fa13c5c1bb4028694b338",
+        "version" : "0.12.1"
       }
     },
     {
       "identity" : "ios-authorization",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/diia-open-source/ios-authorization.git",
+      "location" : "https://github.com/nkoruts/ios-authorization",
       "state" : {
-        "revision" : "af2497992f278a2fe1cad7a21641d7a988403bbf",
-        "version" : "1.0.19"
+        "branch" : "main",
+        "revision" : "59657ed68cd3e3ba683b4555e2b0b46936534bdd"
       }
     },
     {
       "identity" : "ios-commonservices",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/diia-open-source/ios-commonservices.git",
+      "location" : "https://github.com/nkoruts/ios-commonservices.git",
       "state" : {
-        "revision" : "bc7d34c25c3ce8a6596568438cf36b695d53714e",
-        "version" : "1.0.14"
+        "branch" : "main",
+        "revision" : "c98a7e7c4f423679209c3c25b9ede2ddbe0cebaf"
       }
     },
     {
       "identity" : "ios-commontypes",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/diia-open-source/ios-commontypes.git",
+      "location" : "https://github.com/nkoruts/ios-commontypes.git",
       "state" : {
-        "revision" : "5c39a33bd2d8453b1a4dbaefa8d85bcdd85d8fde",
-        "version" : "1.0.21"
+        "branch" : "main",
+        "revision" : "b71495bf2c62c7ecc61212fb6597708222a8ec0e"
       }
     },
     {
@@ -141,8 +141,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/nkoruts/ios-documents.git",
       "state" : {
-        "branch" : "develop",
-        "revision" : "2516b4e1651e10af88f16fd3ce02141839ddb6cd"
+        "branch" : "main",
+        "revision" : "916220d1683c48b24b29e744fc9fc55ca98da7c8"
       }
     },
     {
@@ -160,15 +160,6 @@
       "location" : "https://github.com/diia-open-source/ios-network.git",
       "state" : {
         "revision" : "e64e05aac4eda9e40331bc94110545ea585de39c",
-        "version" : "1.0.13"
-      }
-    },
-    {
-      "identity" : "ios-publicservices",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/diia-open-source/ios-publicservices.git",
-      "state" : {
-        "revision" : "ada60f04ff72debdf45f39cdeaa73daa6bddf0fc",
         "version" : "1.0.13"
       }
     },
@@ -330,8 +321,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SwiftyJSON/SwiftyJSON.git",
       "state" : {
-        "revision" : "2b6054efa051565954e1d2b9da831680026cd768",
-        "version" : "4.3.0"
+        "revision" : "af76cf3ef710b6ca5f8c05f3a31307d44a3c5828",
+        "version" : "5.0.2"
+      }
+    },
     {
       "identity" : "xcglogger",
       "kind" : "remoteSourceControl",

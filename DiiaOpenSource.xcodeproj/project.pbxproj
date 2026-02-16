@@ -7,30 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1640B24C2F4321D00092AC95 /* DiiaCommonServices in Frameworks */ = {isa = PBXBuildFile; productRef = 1640B24B2F4321D00092AC95 /* DiiaCommonServices */; };
+		1640B2542F43250A0092AC95 /* DiiaCommonTypes in Frameworks */ = {isa = PBXBuildFile; productRef = 1640B2532F43250A0092AC95 /* DiiaCommonTypes */; };
+		1640B2572F4333610092AC95 /* EudiWalletDeeplinkRouteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640B2562F4333610092AC95 /* EudiWalletDeeplinkRouteBuilder.swift */; };
 		165BBC822F3CCCC500FE1C08 /* DiiaDocuments in Frameworks */ = {isa = PBXBuildFile; productRef = 165BBC812F3CCCC500FE1C08 /* DiiaDocuments */; };
 		165BBC842F3CCCC500FE1C08 /* DiiaDocumentsCommonTypes in Frameworks */ = {isa = PBXBuildFile; productRef = 165BBC832F3CCCC500FE1C08 /* DiiaDocumentsCommonTypes */; };
 		165BBC862F3CCCC500FE1C08 /* DiiaDocumentsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 165BBC852F3CCCC500FE1C08 /* DiiaDocumentsCore */; };
 		16743A142F3A212D006E79D8 /* TitleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16743A132F3A212D006E79D8 /* TitleTableCell.swift */; };
 		16743A192F3A2BBC006E79D8 /* DocumentReorderingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16743A172F3A2BBC006E79D8 /* DocumentReorderingService.swift */; };
 		16B2F70D2F3E08590012C8D4 /* EudiWalletKit in Frameworks */ = {isa = PBXBuildFile; productRef = 16B2F70C2F3E08590012C8D4 /* EudiWalletKit */; };
+		16B2F78F2F3E0D140012C8D4 /* EudiPresentationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F7812F3E0D140012C8D4 /* EudiPresentationRequest.swift */; };
+		16B2F7902F3E0D140012C8D4 /* EudiWalletIssueCredentialsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F7822F3E0D140012C8D4 /* EudiWalletIssueCredentialsRequest.swift */; };
+		16B2F7912F3E0D140012C8D4 /* EudiCorDocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F77D2F3E0D140012C8D4 /* EudiCorDocumentModel.swift */; };
+		16B2F7922F3E0D140012C8D4 /* EudiWalletCredentialStoringResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F7842F3E0D140012C8D4 /* EudiWalletCredentialStoringResult.swift */; };
+		16B2F7932F3E0D140012C8D4 /* DocClaimsDecodable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F7872F3E0D140012C8D4 /* DocClaimsDecodable+Ext.swift */; };
+		16B2F7942F3E0D140012C8D4 /* EudiPidDocumentModel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F7892F3E0D140012C8D4 /* EudiPidDocumentModel+Ext.swift */; };
+		16B2F7952F3E0D140012C8D4 /* EudiDocValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F7802F3E0D140012C8D4 /* EudiDocValue.swift */; };
+		16B2F7972F3E0D140012C8D4 /* EudiMdlDocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F77E2F3E0D140012C8D4 /* EudiMdlDocumentModel.swift */; };
+		16B2F7992F3E0D140012C8D4 /* DocDataValue+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F7882F3E0D140012C8D4 /* DocDataValue+Ext.swift */; };
+		16B2F79A2F3E0D140012C8D4 /* EudiQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F77A2F3E0D140012C8D4 /* EudiQRCodeView.swift */; };
+		16B2F79B2F3E0D140012C8D4 /* EudiPidDocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F77C2F3E0D140012C8D4 /* EudiPidDocumentModel.swift */; };
+		16B2F79C2F3E0D140012C8D4 /* EudiCorDocumentModel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F78B2F3E0D140012C8D4 /* EudiCorDocumentModel+Ext.swift */; };
+		16B2F79D2F3E0D140012C8D4 /* EudiWalletKitConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F7742F3E0D140012C8D4 /* EudiWalletKitConfig.swift */; };
+		16B2F79E2F3E0D140012C8D4 /* EudiWalletKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F7752F3E0D140012C8D4 /* EudiWalletKitController.swift */; };
+		16B2F79F2F3E0D140012C8D4 /* EudiWalletCredentialsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F7832F3E0D140012C8D4 /* EudiWalletCredentialsResponse.swift */; };
+		16B2F7A02F3E0D140012C8D4 /* EudiWalletRemoteSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F7782F3E0D140012C8D4 /* EudiWalletRemoteSessionManager.swift */; };
+		16B2F7A12F3E0D140012C8D4 /* EudiWalletProximitySessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F7772F3E0D140012C8D4 /* EudiWalletProximitySessionManager.swift */; };
+		16B2F7A22F3E0D140012C8D4 /* EudiWalletError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F7852F3E0D140012C8D4 /* EudiWalletError.swift */; };
+		16B2F7A32F3E0D140012C8D4 /* EudiMdlDocumentModel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2F78A2F3E0D140012C8D4 /* EudiMdlDocumentModel+Ext.swift */; };
+		16B2F7A42F3E0D140012C8D4 /* pidissuerca02_nl.der in Resources */ = {isa = PBXBuildFile; fileRef = 16B2F76B2F3E0D140012C8D4 /* pidissuerca02_nl.der */; };
+		16B2F7A52F3E0D140012C8D4 /* pidissuerca02_ut.der in Resources */ = {isa = PBXBuildFile; fileRef = 16B2F76D2F3E0D140012C8D4 /* pidissuerca02_ut.der */; };
+		16B2F7A62F3E0D140012C8D4 /* esoz_cert.der in Resources */ = {isa = PBXBuildFile; fileRef = 16B2F7662F3E0D140012C8D4 /* esoz_cert.der */; };
+		16B2F7A72F3E0D140012C8D4 /* pidissuerca02_lu.der in Resources */ = {isa = PBXBuildFile; fileRef = 16B2F76A2F3E0D140012C8D4 /* pidissuerca02_lu.der */; };
+		16B2F7A82F3E0D140012C8D4 /* pidissuerca02_ee.der in Resources */ = {isa = PBXBuildFile; fileRef = 16B2F7682F3E0D140012C8D4 /* pidissuerca02_ee.der */; };
+		16B2F7A92F3E0D140012C8D4 /* pidissuerca02_pt.der in Resources */ = {isa = PBXBuildFile; fileRef = 16B2F76C2F3E0D140012C8D4 /* pidissuerca02_pt.der */; };
+		16B2F7AA2F3E0D140012C8D4 /* pidissuerca02_eu.der in Resources */ = {isa = PBXBuildFile; fileRef = 16B2F7692F3E0D140012C8D4 /* pidissuerca02_eu.der */; };
+		16B2F7AB2F3E0D140012C8D4 /* pidissuerca02_cz.der in Resources */ = {isa = PBXBuildFile; fileRef = 16B2F7672F3E0D140012C8D4 /* pidissuerca02_cz.der */; };
+		16E1788B2F3F245500FFCF7B /* DiiaAuthorization in Frameworks */ = {isa = PBXBuildFile; productRef = 16E1788A2F3F245500FFCF7B /* DiiaAuthorization */; };
+		16E1788F2F3F245500FFCF7B /* DiiaAuthorizationPinCode in Frameworks */ = {isa = PBXBuildFile; productRef = 16E1788E2F3F245500FFCF7B /* DiiaAuthorizationPinCode */; };
+		16E178C02F3F2E7C00FFCF7B /* EudiWalletRemoteSharingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178B42F3F2E7C00FFCF7B /* EudiWalletRemoteSharingModule.swift */; };
+		16E178C12F3F2E7C00FFCF7B /* EWalletAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E1789B2F3F2E7C00FFCF7B /* EWalletAPIClient.swift */; };
+		16E178C42F3F2E7C00FFCF7B /* EudiWalletDocumentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178972F3F2E7C00FFCF7B /* EudiWalletDocumentType.swift */; };
+		16E178C72F3F2E7C00FFCF7B /* EudiWalletVerificationRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178B02F3F2E7C00FFCF7B /* EudiWalletVerificationRequestAdapter.swift */; };
+		16E178C82F3F2E7C00FFCF7B /* EudiDocumentIssuancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178AB2F3F2E7C00FFCF7B /* EudiDocumentIssuancePresenter.swift */; };
+		16E178CA2F3F2E7C00FFCF7B /* EudiWalletRemoteSharingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178B52F3F2E7C00FFCF7B /* EudiWalletRemoteSharingPresenter.swift */; };
+		16E178CC2F3F2E7C00FFCF7B /* EWalletAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E1789A2F3F2E7C00FFCF7B /* EWalletAPI.swift */; };
+		16E178CD2F3F2E7C00FFCF7B /* EudiDocumentsQRModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178BB2F3F2E7C00FFCF7B /* EudiDocumentsQRModule.swift */; };
+		16E178CF2F3F2E7C00FFCF7B /* EudiWalletOnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178AE2F3F2E7C00FFCF7B /* EudiWalletOnboardingPresenter.swift */; };
+		16E178D12F3F2E7C00FFCF7B /* EudiDocumentIssuanceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178AA2F3F2E7C00FFCF7B /* EudiDocumentIssuanceModule.swift */; };
+		16E178D22F3F2E7C00FFCF7B /* EudiDocumentsQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178BD2F3F2E7C00FFCF7B /* EudiDocumentsQRViewController.swift */; };
+		16E178D32F3F2E7C00FFCF7B /* EudiWalletProximitySharingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178B72F3F2E7C00FFCF7B /* EudiWalletProximitySharingModule.swift */; };
+		16E178D42F3F2E7C00FFCF7B /* EudiWalletOnboardingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178AD2F3F2E7C00FFCF7B /* EudiWalletOnboardingModule.swift */; };
+		16E178D52F3F2E7C00FFCF7B /* EudiWalletProximitySharingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178B82F3F2E7C00FFCF7B /* EudiWalletProximitySharingPresenter.swift */; };
+		16E178D62F3F2E7C00FFCF7B /* EudiWalletSharingDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178B12F3F2E7C00FFCF7B /* EudiWalletSharingDataHandler.swift */; };
+		16E178D82F3F2E7C00FFCF7B /* EudiDocumentsQRPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178BC2F3F2E7C00FFCF7B /* EudiDocumentsQRPresenter.swift */; };
+		16E178D92F3F2E7C00FFCF7B /* ewallet_verification_display_labels.json in Resources */ = {isa = PBXBuildFile; fileRef = 16E178952F3F2E7C00FFCF7B /* ewallet_verification_display_labels.json */; };
+		16E178E12F3F432F00FFCF7B /* BaseContextMenuProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178E02F3F432F00FFCF7B /* BaseContextMenuProvider.swift */; };
+		16E178E32F3F469D00FFCF7B /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178E22F3F469D00FFCF7B /* FlowCoordinator.swift */; };
+		16E178E52F3F481B00FFCF7B /* CommunicationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178E42F3F481B00FFCF7B /* CommunicationHelper.swift */; };
+		16E178E72F3F4A7500FFCF7B /* CommonService+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178E62F3F4A7500FFCF7B /* CommonService+Defaults.swift */; };
+		16E178EC2F3F4C5E00FFCF7B /* PidDocumentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178E92F3F4C5E00FFCF7B /* PidDocumentProvider.swift */; };
+		16E178ED2F3F4C5E00FFCF7B /* MdlDocumentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178EA2F3F4C5E00FFCF7B /* MdlDocumentProvider.swift */; };
+		16E178EE2F3F4C5E00FFCF7B /* CorDocumentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178EB2F3F4C5E00FFCF7B /* CorDocumentProvider.swift */; };
+		16E178F12F3F4D7800FFCF7B /* DocumentModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178F02F3F4D7800FFCF7B /* DocumentModelProvider.swift */; };
+		16E178F62F3F4EBD00FFCF7B /* CorCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178F52F3F4EBD00FFCF7B /* CorCardViewModel.swift */; };
+		16E178F72F3F4EBD00FFCF7B /* PidCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178F32F3F4EBD00FFCF7B /* PidCardViewModel.swift */; };
+		16E178F82F3F4EBD00FFCF7B /* MdlCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178F42F3F4EBD00FFCF7B /* MdlCardViewModel.swift */; };
+		16E178FA2F3F543300FFCF7B /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E178F92F3F543300FFCF7B /* UIApplication+Extension.swift */; };
 		332236042B87927800E6B7AF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 332236032B87927700E6B7AF /* README.md */; };
 		3329AF692B29F928004B8517 /* AuthorizationContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3329AF682B29F928004B8517 /* AuthorizationContext+Extension.swift */; };
-		3329AF6B2B29F944004B8517 /* UserAuthorizationErrorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3329AF6A2B29F944004B8517 /* UserAuthorizationErrorRouter.swift */; };
-		3329AF6D2B2A1D96004B8517 /* VerificationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3329AF6C2B2A1D96004B8517 /* VerificationFlow.swift */; };
 		3329AF732B2A1EE6004B8517 /* ChangePincodeModuleContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3329AF722B2A1EE6004B8517 /* ChangePincodeModuleContext+Extension.swift */; };
 		3329AF782B2A1F1F004B8517 /* EnterPinCodeModuleContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3329AF742B2A1F1F004B8517 /* EnterPinCodeModuleContext+Extension.swift */; };
 		3329AF792B2A1F1F004B8517 /* PinCodeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3329AF752B2A1F1F004B8517 /* PinCodeStorage.swift */; };
 		3329AF7A2B2A1F1F004B8517 /* EnterPinCodeAuthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3329AF762B2A1F1F004B8517 /* EnterPinCodeAuthDelegate.swift */; };
 		3329AF7B2B2A1F1F004B8517 /* EnterPinCodeViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3329AF772B2A1F1F004B8517 /* EnterPinCodeViewModel+Extension.swift */; };
-		3329AF7E2B2A5201004B8517 /* AuthorizationApiClient+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3329AF7D2B2A5201004B8517 /* AuthorizationApiClient+Extension.swift */; };
 		339AE86A2B5E6C6100C21112 /* DiiaUIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE8692B5E6C6100C21112 /* DiiaUIComponents */; };
 		339AE86C2B5E6C8500C21112 /* DiiaMVPModule in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE86B2B5E6C8500C21112 /* DiiaMVPModule */; };
-		339AE8702B5E6CA200C21112 /* DiiaCommonTypes in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE86F2B5E6CA200C21112 /* DiiaCommonTypes */; };
-		339AE8722B5E6CC000C21112 /* DiiaCommonServices in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE8712B5E6CC000C21112 /* DiiaCommonServices */; };
-		339AE8742B5E6CCF00C21112 /* DiiaPublicServices in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE8732B5E6CCF00C21112 /* DiiaPublicServices */; };
-		339AE87C2B5E6CFE00C21112 /* DiiaAuthorization in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE87B2B5E6CFE00C21112 /* DiiaAuthorization */; };
-		339AE87E2B5E6CFE00C21112 /* DiiaAuthorizationMethods in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE87D2B5E6CFE00C21112 /* DiiaAuthorizationMethods */; };
-		339AE8802B5E6CFE00C21112 /* DiiaAuthorizationPinCode in Frameworks */ = {isa = PBXBuildFile; productRef = 339AE87F2B5E6CFE00C21112 /* DiiaAuthorizationPinCode */; };
 		33B035332B29CF1700374227 /* AuthorizationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B035322B29CF1700374227 /* AuthorizationStorage.swift */; };
 		33C550412B48B6A200E100CD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 33C550402B48B6A200E100CD /* Lottie */; };
 		42F49A0C2DCC94C800B8D36F /* ContextMenuConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F49A0B2DCC94C800B8D36F /* ContextMenuConfigurable.swift */; };
@@ -91,7 +143,6 @@
 		4937CBA62D95A7C00014D2BC /* FeedOfflineViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4937CB8D2D95A7C00014D2BC /* FeedOfflineViewBuilder.swift */; };
 		4937CBA82D95A7C00014D2BC /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4937CB902D95A7C00014D2BC /* FeedPresenter.swift */; };
 		4937CBAA2D95A7C00014D2BC /* FeedModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4937CB8F2D95A7C00014D2BC /* FeedModule.swift */; };
-		4937CBB02D95AC070014D2BC /* DiiaIdSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4937CBAF2D95AC050014D2BC /* DiiaIdSigner.swift */; };
 		7B7693C62B7AE0380007A89F /* DSImageNameResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7693C52B7AE0380007A89F /* DSImageNameResolver.swift */; };
 		7B7693D12B7B02E90007A89F /* DocReorderingCellInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7693D02B7B02E90007A89F /* DocReorderingCellInfoView.swift */; };
 		7B7693D32B7B03250007A89F /* DocumentReorderingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7693D22B7B03250007A89F /* DocumentReorderingCell.swift */; };
@@ -105,9 +156,7 @@
 		7B7693ED2B8741BC0007A89F /* NibLoadable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7693EC2B8741BC0007A89F /* NibLoadable+Extension.swift */; };
 		7BD75AD92B678129000D54CA /* background_gradient.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD75AD82B678129000D54CA /* background_gradient.json */; };
 		7BD75ADB2B679FCB000D54CA /* splash_cropped.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD75ADA2B679FCB000D54CA /* splash_cropped.json */; };
-		7BE198EA2B14FBDF008C9FAC /* TemplateActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE198E92B14FBDF008C9FAC /* TemplateActionFactory.swift */; };
 		7BE1992D2B16DB2D008C9FAC /* DocumentsCollectionModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE1990A2B16DB2D008C9FAC /* DocumentsCollectionModuleFactory.swift */; };
-		7BE199342B16DB2D008C9FAC /* AddDocumentsActionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE199132B16DB2D008C9FAC /* AddDocumentsActionProvider.swift */; };
 		7BE199362B16DB2D008C9FAC /* DocumentsProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE199152B16DB2D008C9FAC /* DocumentsProcessor.swift */; };
 		7BE199372B16DB2D008C9FAC /* DocumentsReservePhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE199162B16DB2D008C9FAC /* DocumentsReservePhotoService.swift */; };
 		7BE1993B2B16DB2D008C9FAC /* DocumentsReorderingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE1991B2B16DB2D008C9FAC /* DocumentsReorderingModule.swift */; };
@@ -125,18 +174,72 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1640B2562F4333610092AC95 /* EudiWalletDeeplinkRouteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletDeeplinkRouteBuilder.swift; sourceTree = "<group>"; };
 		16743A132F3A212D006E79D8 /* TitleTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableCell.swift; sourceTree = "<group>"; };
 		16743A172F3A2BBC006E79D8 /* DocumentReorderingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentReorderingService.swift; sourceTree = "<group>"; };
+		16B2F7662F3E0D140012C8D4 /* esoz_cert.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = esoz_cert.der; sourceTree = "<group>"; };
+		16B2F7672F3E0D140012C8D4 /* pidissuerca02_cz.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = pidissuerca02_cz.der; sourceTree = "<group>"; };
+		16B2F7682F3E0D140012C8D4 /* pidissuerca02_ee.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = pidissuerca02_ee.der; sourceTree = "<group>"; };
+		16B2F7692F3E0D140012C8D4 /* pidissuerca02_eu.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = pidissuerca02_eu.der; sourceTree = "<group>"; };
+		16B2F76A2F3E0D140012C8D4 /* pidissuerca02_lu.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = pidissuerca02_lu.der; sourceTree = "<group>"; };
+		16B2F76B2F3E0D140012C8D4 /* pidissuerca02_nl.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = pidissuerca02_nl.der; sourceTree = "<group>"; };
+		16B2F76C2F3E0D140012C8D4 /* pidissuerca02_pt.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = pidissuerca02_pt.der; sourceTree = "<group>"; };
+		16B2F76D2F3E0D140012C8D4 /* pidissuerca02_ut.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = pidissuerca02_ut.der; sourceTree = "<group>"; };
+		16B2F7742F3E0D140012C8D4 /* EudiWalletKitConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletKitConfig.swift; sourceTree = "<group>"; };
+		16B2F7752F3E0D140012C8D4 /* EudiWalletKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletKitController.swift; sourceTree = "<group>"; };
+		16B2F7772F3E0D140012C8D4 /* EudiWalletProximitySessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletProximitySessionManager.swift; sourceTree = "<group>"; };
+		16B2F7782F3E0D140012C8D4 /* EudiWalletRemoteSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletRemoteSessionManager.swift; sourceTree = "<group>"; };
+		16B2F77A2F3E0D140012C8D4 /* EudiQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiQRCodeView.swift; sourceTree = "<group>"; };
+		16B2F77C2F3E0D140012C8D4 /* EudiPidDocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiPidDocumentModel.swift; sourceTree = "<group>"; };
+		16B2F77D2F3E0D140012C8D4 /* EudiCorDocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiCorDocumentModel.swift; sourceTree = "<group>"; };
+		16B2F77E2F3E0D140012C8D4 /* EudiMdlDocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiMdlDocumentModel.swift; sourceTree = "<group>"; };
+		16B2F7802F3E0D140012C8D4 /* EudiDocValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiDocValue.swift; sourceTree = "<group>"; };
+		16B2F7812F3E0D140012C8D4 /* EudiPresentationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiPresentationRequest.swift; sourceTree = "<group>"; };
+		16B2F7822F3E0D140012C8D4 /* EudiWalletIssueCredentialsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletIssueCredentialsRequest.swift; sourceTree = "<group>"; };
+		16B2F7832F3E0D140012C8D4 /* EudiWalletCredentialsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletCredentialsResponse.swift; sourceTree = "<group>"; };
+		16B2F7842F3E0D140012C8D4 /* EudiWalletCredentialStoringResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletCredentialStoringResult.swift; sourceTree = "<group>"; };
+		16B2F7852F3E0D140012C8D4 /* EudiWalletError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletError.swift; sourceTree = "<group>"; };
+		16B2F7872F3E0D140012C8D4 /* DocClaimsDecodable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DocClaimsDecodable+Ext.swift"; path = "../diia-mobile-ios/Diia/Common/EUDIWallet/Extensions/DocClaimsDecodable+Ext.swift"; sourceTree = SOURCE_ROOT; };
+		16B2F7882F3E0D140012C8D4 /* DocDataValue+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DocDataValue+Ext.swift"; path = "../diia-mobile-ios/Diia/Common/EUDIWallet/Extensions/DocDataValue+Ext.swift"; sourceTree = SOURCE_ROOT; };
+		16B2F7892F3E0D140012C8D4 /* EudiPidDocumentModel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "EudiPidDocumentModel+Ext.swift"; path = "../diia-mobile-ios/Diia/Common/EUDIWallet/Extensions/EudiPidDocumentModel+Ext.swift"; sourceTree = SOURCE_ROOT; };
+		16B2F78A2F3E0D140012C8D4 /* EudiMdlDocumentModel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "EudiMdlDocumentModel+Ext.swift"; path = "../diia-mobile-ios/Diia/Common/EUDIWallet/Extensions/EudiMdlDocumentModel+Ext.swift"; sourceTree = SOURCE_ROOT; };
+		16B2F78B2F3E0D140012C8D4 /* EudiCorDocumentModel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "EudiCorDocumentModel+Ext.swift"; path = "../diia-mobile-ios/Diia/Common/EUDIWallet/Extensions/EudiCorDocumentModel+Ext.swift"; sourceTree = SOURCE_ROOT; };
+		16E178952F3F2E7C00FFCF7B /* ewallet_verification_display_labels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ewallet_verification_display_labels.json; sourceTree = "<group>"; };
+		16E178972F3F2E7C00FFCF7B /* EudiWalletDocumentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletDocumentType.swift; sourceTree = "<group>"; };
+		16E1789A2F3F2E7C00FFCF7B /* EWalletAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWalletAPI.swift; sourceTree = "<group>"; };
+		16E1789B2F3F2E7C00FFCF7B /* EWalletAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWalletAPIClient.swift; sourceTree = "<group>"; };
+		16E178AA2F3F2E7C00FFCF7B /* EudiDocumentIssuanceModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiDocumentIssuanceModule.swift; sourceTree = "<group>"; };
+		16E178AB2F3F2E7C00FFCF7B /* EudiDocumentIssuancePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiDocumentIssuancePresenter.swift; sourceTree = "<group>"; };
+		16E178AD2F3F2E7C00FFCF7B /* EudiWalletOnboardingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletOnboardingModule.swift; sourceTree = "<group>"; };
+		16E178AE2F3F2E7C00FFCF7B /* EudiWalletOnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletOnboardingPresenter.swift; sourceTree = "<group>"; };
+		16E178B02F3F2E7C00FFCF7B /* EudiWalletVerificationRequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletVerificationRequestAdapter.swift; sourceTree = "<group>"; };
+		16E178B12F3F2E7C00FFCF7B /* EudiWalletSharingDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletSharingDataHandler.swift; sourceTree = "<group>"; };
+		16E178B42F3F2E7C00FFCF7B /* EudiWalletRemoteSharingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletRemoteSharingModule.swift; sourceTree = "<group>"; };
+		16E178B52F3F2E7C00FFCF7B /* EudiWalletRemoteSharingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletRemoteSharingPresenter.swift; sourceTree = "<group>"; };
+		16E178B72F3F2E7C00FFCF7B /* EudiWalletProximitySharingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletProximitySharingModule.swift; sourceTree = "<group>"; };
+		16E178B82F3F2E7C00FFCF7B /* EudiWalletProximitySharingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiWalletProximitySharingPresenter.swift; sourceTree = "<group>"; };
+		16E178BB2F3F2E7C00FFCF7B /* EudiDocumentsQRModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiDocumentsQRModule.swift; sourceTree = "<group>"; };
+		16E178BC2F3F2E7C00FFCF7B /* EudiDocumentsQRPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiDocumentsQRPresenter.swift; sourceTree = "<group>"; };
+		16E178BD2F3F2E7C00FFCF7B /* EudiDocumentsQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EudiDocumentsQRViewController.swift; sourceTree = "<group>"; };
+		16E178E02F3F432F00FFCF7B /* BaseContextMenuProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContextMenuProvider.swift; sourceTree = "<group>"; };
+		16E178E22F3F469D00FFCF7B /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		16E178E42F3F481B00FFCF7B /* CommunicationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationHelper.swift; sourceTree = "<group>"; };
+		16E178E62F3F4A7500FFCF7B /* CommonService+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommonService+Defaults.swift"; sourceTree = "<group>"; };
+		16E178E92F3F4C5E00FFCF7B /* PidDocumentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PidDocumentProvider.swift; sourceTree = "<group>"; };
+		16E178EA2F3F4C5E00FFCF7B /* MdlDocumentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MdlDocumentProvider.swift; sourceTree = "<group>"; };
+		16E178EB2F3F4C5E00FFCF7B /* CorDocumentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorDocumentProvider.swift; sourceTree = "<group>"; };
+		16E178F02F3F4D7800FFCF7B /* DocumentModelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentModelProvider.swift; sourceTree = "<group>"; };
+		16E178F32F3F4EBD00FFCF7B /* PidCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PidCardViewModel.swift; sourceTree = "<group>"; };
+		16E178F42F3F4EBD00FFCF7B /* MdlCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MdlCardViewModel.swift; sourceTree = "<group>"; };
+		16E178F52F3F4EBD00FFCF7B /* CorCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorCardViewModel.swift; sourceTree = "<group>"; };
+		16E178F92F3F543300FFCF7B /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		332236032B87927700E6B7AF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3329AF682B29F928004B8517 /* AuthorizationContext+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthorizationContext+Extension.swift"; sourceTree = "<group>"; };
-		3329AF6A2B29F944004B8517 /* UserAuthorizationErrorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthorizationErrorRouter.swift; sourceTree = "<group>"; };
-		3329AF6C2B2A1D96004B8517 /* VerificationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationFlow.swift; sourceTree = "<group>"; };
 		3329AF722B2A1EE6004B8517 /* ChangePincodeModuleContext+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChangePincodeModuleContext+Extension.swift"; sourceTree = "<group>"; };
 		3329AF742B2A1F1F004B8517 /* EnterPinCodeModuleContext+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnterPinCodeModuleContext+Extension.swift"; sourceTree = "<group>"; };
 		3329AF752B2A1F1F004B8517 /* PinCodeStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeStorage.swift; sourceTree = "<group>"; };
 		3329AF762B2A1F1F004B8517 /* EnterPinCodeAuthDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPinCodeAuthDelegate.swift; sourceTree = "<group>"; };
 		3329AF772B2A1F1F004B8517 /* EnterPinCodeViewModel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnterPinCodeViewModel+Extension.swift"; sourceTree = "<group>"; };
-		3329AF7D2B2A5201004B8517 /* AuthorizationApiClient+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthorizationApiClient+Extension.swift"; sourceTree = "<group>"; };
 		33B035322B29CF1700374227 /* AuthorizationStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationStorage.swift; sourceTree = "<group>"; };
 		42F49A0B2DCC94C800B8D36F /* ContextMenuConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextMenuConfigurable.swift; sourceTree = "<group>"; };
 		42F9229F29FBDC820072DDC1 /* DiiaOpenSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiiaOpenSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,7 +302,6 @@
 		4937CB902D95A7C00014D2BC /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		4937CB912D95A7C00014D2BC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		4937CB922D95A7C00014D2BC /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
-		4937CBAF2D95AC050014D2BC /* DiiaIdSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiiaIdSigner.swift; sourceTree = "<group>"; };
 		7B7693C52B7AE0380007A89F /* DSImageNameResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSImageNameResolver.swift; sourceTree = "<group>"; };
 		7B7693D02B7B02E90007A89F /* DocReorderingCellInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocReorderingCellInfoView.swift; sourceTree = "<group>"; };
 		7B7693D22B7B03250007A89F /* DocumentReorderingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentReorderingCell.swift; sourceTree = "<group>"; };
@@ -213,9 +315,7 @@
 		7B7693EC2B8741BC0007A89F /* NibLoadable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NibLoadable+Extension.swift"; sourceTree = "<group>"; };
 		7BD75AD82B678129000D54CA /* background_gradient.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = background_gradient.json; sourceTree = "<group>"; };
 		7BD75ADA2B679FCB000D54CA /* splash_cropped.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash_cropped.json; sourceTree = "<group>"; };
-		7BE198E92B14FBDF008C9FAC /* TemplateActionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateActionFactory.swift; sourceTree = "<group>"; };
 		7BE1990A2B16DB2D008C9FAC /* DocumentsCollectionModuleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsCollectionModuleFactory.swift; sourceTree = "<group>"; };
-		7BE199132B16DB2D008C9FAC /* AddDocumentsActionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDocumentsActionProvider.swift; sourceTree = "<group>"; };
 		7BE199152B16DB2D008C9FAC /* DocumentsProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsProcessor.swift; sourceTree = "<group>"; };
 		7BE199162B16DB2D008C9FAC /* DocumentsReservePhotoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsReservePhotoService.swift; sourceTree = "<group>"; };
 		7BE1991B2B16DB2D008C9FAC /* DocumentsReorderingModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsReorderingModule.swift; sourceTree = "<group>"; };
@@ -237,19 +337,17 @@
 			files = (
 				9487B53F2B76594800571A1D /* Alamofire in Frameworks */,
 				165BBC862F3CCCC500FE1C08 /* DiiaDocumentsCore in Frameworks */,
-				339AE8802B5E6CFE00C21112 /* DiiaAuthorizationPinCode in Frameworks */,
-				339AE8722B5E6CC000C21112 /* DiiaCommonServices in Frameworks */,
+				1640B24C2F4321D00092AC95 /* DiiaCommonServices in Frameworks */,
 				165BBC842F3CCCC500FE1C08 /* DiiaDocumentsCommonTypes in Frameworks */,
 				16B2F70D2F3E08590012C8D4 /* EudiWalletKit in Frameworks */,
 				33C550412B48B6A200E100CD /* Lottie in Frameworks */,
+				16E1788F2F3F245500FFCF7B /* DiiaAuthorizationPinCode in Frameworks */,
 				9487B5422B765B8600571A1D /* ReactiveKit in Frameworks */,
-				339AE87C2B5E6CFE00C21112 /* DiiaAuthorization in Frameworks */,
 				165BBC822F3CCCC500FE1C08 /* DiiaDocuments in Frameworks */,
-				339AE8702B5E6CA200C21112 /* DiiaCommonTypes in Frameworks */,
+				1640B2542F43250A0092AC95 /* DiiaCommonTypes in Frameworks */,
 				339AE86C2B5E6C8500C21112 /* DiiaMVPModule in Frameworks */,
 				339AE86A2B5E6C6100C21112 /* DiiaUIComponents in Frameworks */,
-				339AE8742B5E6CCF00C21112 /* DiiaPublicServices in Frameworks */,
-				339AE87E2B5E6CFE00C21112 /* DiiaAuthorizationMethods in Frameworks */,
+				16E1788B2F3F245500FFCF7B /* DiiaAuthorization in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,27 +362,248 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		16B2F76E2F3E0D140012C8D4 /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+				16B2F7662F3E0D140012C8D4 /* esoz_cert.der */,
+				16B2F7672F3E0D140012C8D4 /* pidissuerca02_cz.der */,
+				16B2F7682F3E0D140012C8D4 /* pidissuerca02_ee.der */,
+				16B2F7692F3E0D140012C8D4 /* pidissuerca02_eu.der */,
+				16B2F76A2F3E0D140012C8D4 /* pidissuerca02_lu.der */,
+				16B2F76B2F3E0D140012C8D4 /* pidissuerca02_nl.der */,
+				16B2F76C2F3E0D140012C8D4 /* pidissuerca02_pt.der */,
+				16B2F76D2F3E0D140012C8D4 /* pidissuerca02_ut.der */,
+			);
+			path = Certificates;
+			sourceTree = "<group>";
+		};
+		16B2F7762F3E0D140012C8D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				16B2F7742F3E0D140012C8D4 /* EudiWalletKitConfig.swift */,
+				16B2F7752F3E0D140012C8D4 /* EudiWalletKitController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		16B2F7792F3E0D140012C8D4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				16B2F7772F3E0D140012C8D4 /* EudiWalletProximitySessionManager.swift */,
+				16B2F7782F3E0D140012C8D4 /* EudiWalletRemoteSessionManager.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		16B2F77B2F3E0D140012C8D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				16B2F77A2F3E0D140012C8D4 /* EudiQRCodeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		16B2F77F2F3E0D140012C8D4 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				16B2F77C2F3E0D140012C8D4 /* EudiPidDocumentModel.swift */,
+				16B2F77D2F3E0D140012C8D4 /* EudiCorDocumentModel.swift */,
+				16B2F77E2F3E0D140012C8D4 /* EudiMdlDocumentModel.swift */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		16B2F7862F3E0D140012C8D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				16B2F77F2F3E0D140012C8D4 /* Documents */,
+				16B2F7802F3E0D140012C8D4 /* EudiDocValue.swift */,
+				16B2F7812F3E0D140012C8D4 /* EudiPresentationRequest.swift */,
+				16B2F7822F3E0D140012C8D4 /* EudiWalletIssueCredentialsRequest.swift */,
+				16B2F7832F3E0D140012C8D4 /* EudiWalletCredentialsResponse.swift */,
+				16B2F7842F3E0D140012C8D4 /* EudiWalletCredentialStoringResult.swift */,
+				16B2F7852F3E0D140012C8D4 /* EudiWalletError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		16B2F78C2F3E0D140012C8D4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				16B2F7872F3E0D140012C8D4 /* DocClaimsDecodable+Ext.swift */,
+				16B2F7882F3E0D140012C8D4 /* DocDataValue+Ext.swift */,
+				16B2F7892F3E0D140012C8D4 /* EudiPidDocumentModel+Ext.swift */,
+				16B2F78A2F3E0D140012C8D4 /* EudiMdlDocumentModel+Ext.swift */,
+				16B2F78B2F3E0D140012C8D4 /* EudiCorDocumentModel+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		16B2F78D2F3E0D140012C8D4 /* EudiWallet */ = {
+			isa = PBXGroup;
+			children = (
+				16B2F76E2F3E0D140012C8D4 /* Certificates */,
+				16B2F7762F3E0D140012C8D4 /* Controller */,
+				16B2F7792F3E0D140012C8D4 /* Presentation */,
+				16B2F77B2F3E0D140012C8D4 /* Views */,
+				16B2F7862F3E0D140012C8D4 /* Models */,
+				16B2F78C2F3E0D140012C8D4 /* Extensions */,
+			);
+			path = EudiWallet;
+			sourceTree = "<group>";
+		};
+		16E178962F3F2E7C00FFCF7B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				16E178952F3F2E7C00FFCF7B /* ewallet_verification_display_labels.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		16E178992F3F2E7C00FFCF7B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				16E178972F3F2E7C00FFCF7B /* EudiWalletDocumentType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		16E1789C2F3F2E7C00FFCF7B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				16E1789A2F3F2E7C00FFCF7B /* EWalletAPI.swift */,
+				16E1789B2F3F2E7C00FFCF7B /* EWalletAPIClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		16E1789D2F3F2E7C00FFCF7B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				16E178962F3F2E7C00FFCF7B /* Resources */,
+				16E178992F3F2E7C00FFCF7B /* Models */,
+				16E1789C2F3F2E7C00FFCF7B /* API */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		16E178AC2F3F2E7C00FFCF7B /* EudiDocumentIssuance */ = {
+			isa = PBXGroup;
+			children = (
+				16E178AA2F3F2E7C00FFCF7B /* EudiDocumentIssuanceModule.swift */,
+				16E178AB2F3F2E7C00FFCF7B /* EudiDocumentIssuancePresenter.swift */,
+			);
+			path = EudiDocumentIssuance;
+			sourceTree = "<group>";
+		};
+		16E178AF2F3F2E7C00FFCF7B /* EudiWalletOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				16E178AD2F3F2E7C00FFCF7B /* EudiWalletOnboardingModule.swift */,
+				16E178AE2F3F2E7C00FFCF7B /* EudiWalletOnboardingPresenter.swift */,
+			);
+			path = EudiWalletOnboarding;
+			sourceTree = "<group>";
+		};
+		16E178B22F3F2E7C00FFCF7B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				16E178B02F3F2E7C00FFCF7B /* EudiWalletVerificationRequestAdapter.swift */,
+				16E178B12F3F2E7C00FFCF7B /* EudiWalletSharingDataHandler.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		16E178B32F3F2E7C00FFCF7B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				16E178B22F3F2E7C00FFCF7B /* Utilities */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		16E178B62F3F2E7C00FFCF7B /* EudiWalletRemoteSharing */ = {
+			isa = PBXGroup;
+			children = (
+				16E178B42F3F2E7C00FFCF7B /* EudiWalletRemoteSharingModule.swift */,
+				16E178B52F3F2E7C00FFCF7B /* EudiWalletRemoteSharingPresenter.swift */,
+			);
+			path = EudiWalletRemoteSharing;
+			sourceTree = "<group>";
+		};
+		16E178B92F3F2E7C00FFCF7B /* EudiWalletProximitySharing */ = {
+			isa = PBXGroup;
+			children = (
+				16E178B72F3F2E7C00FFCF7B /* EudiWalletProximitySharingModule.swift */,
+				16E178B82F3F2E7C00FFCF7B /* EudiWalletProximitySharingPresenter.swift */,
+			);
+			path = EudiWalletProximitySharing;
+			sourceTree = "<group>";
+		};
+		16E178BA2F3F2E7C00FFCF7B /* EudiWalletDataSharing */ = {
+			isa = PBXGroup;
+			children = (
+				16E178B32F3F2E7C00FFCF7B /* Common */,
+				16E178B62F3F2E7C00FFCF7B /* EudiWalletRemoteSharing */,
+				16E178B92F3F2E7C00FFCF7B /* EudiWalletProximitySharing */,
+			);
+			path = EudiWalletDataSharing;
+			sourceTree = "<group>";
+		};
+		16E178BE2F3F2E7C00FFCF7B /* EudiDocumentsQR */ = {
+			isa = PBXGroup;
+			children = (
+				16E178BB2F3F2E7C00FFCF7B /* EudiDocumentsQRModule.swift */,
+				16E178BC2F3F2E7C00FFCF7B /* EudiDocumentsQRPresenter.swift */,
+				16E178BD2F3F2E7C00FFCF7B /* EudiDocumentsQRViewController.swift */,
+			);
+			path = EudiDocumentsQR;
+			sourceTree = "<group>";
+		};
+		16E178BF2F3F2E7C00FFCF7B /* EudiWallet */ = {
+			isa = PBXGroup;
+			children = (
+				16E1789D2F3F2E7C00FFCF7B /* Common */,
+				16E178AC2F3F2E7C00FFCF7B /* EudiDocumentIssuance */,
+				16E178AF2F3F2E7C00FFCF7B /* EudiWalletOnboarding */,
+				16E178BA2F3F2E7C00FFCF7B /* EudiWalletDataSharing */,
+				16E178BE2F3F2E7C00FFCF7B /* EudiDocumentsQR */,
+			);
+			path = EudiWallet;
+			sourceTree = "<group>";
+		};
+		16E178E82F3F4C5700FFCF7B /* DocumentProviders */ = {
+			isa = PBXGroup;
+			children = (
+				16E178E92F3F4C5E00FFCF7B /* PidDocumentProvider.swift */,
+				16E178EA2F3F4C5E00FFCF7B /* MdlDocumentProvider.swift */,
+				16E178EB2F3F4C5E00FFCF7B /* CorDocumentProvider.swift */,
+				16E178F02F3F4D7800FFCF7B /* DocumentModelProvider.swift */,
+			);
+			path = DocumentProviders;
+			sourceTree = "<group>";
+		};
+		16E178F22F3F4EB500FFCF7B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				16E178F32F3F4EBD00FFCF7B /* PidCardViewModel.swift */,
+				16E178F42F3F4EBD00FFCF7B /* MdlCardViewModel.swift */,
+				16E178F52F3F4EBD00FFCF7B /* CorCardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		33B0352F2B29CADA00374227 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				33C78AC62B2B168D00F97E8E /* EnterPinCode */,
 				3329AF722B2A1EE6004B8517 /* ChangePincodeModuleContext+Extension.swift */,
-				3329AF7D2B2A5201004B8517 /* AuthorizationApiClient+Extension.swift */,
 				3329AF752B2A1F1F004B8517 /* PinCodeStorage.swift */,
 				3329AF682B29F928004B8517 /* AuthorizationContext+Extension.swift */,
-				3329AF6A2B29F944004B8517 /* UserAuthorizationErrorRouter.swift */,
 				33B035322B29CF1700374227 /* AuthorizationStorage.swift */,
 				7B7693E62B7C7E230007A89F /* AuthorizationStateHandler.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		33C78AC42B2B0D5900F97E8E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				3329AF6C2B2A1D96004B8517 /* VerificationFlow.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		33C78AC62B2B168D00F97E8E /* EnterPinCode */ = {
@@ -336,6 +655,7 @@
 		42F922C829FBF61B0072DDC1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				16B2F78D2F3E0D140012C8D4 /* EudiWallet */,
 				42F922E429FBF61B0072DDC1 /* Extensions */,
 				42F9231429FBF61B0072DDC1 /* DeepLinks */,
 				42F9232B29FBF61B0072DDC1 /* Views */,
@@ -350,6 +670,8 @@
 			children = (
 				42F922FF29FBF61B0072DDC1 /* UIScreen+Brightness.swift */,
 				7B7693EC2B8741BC0007A89F /* NibLoadable+Extension.swift */,
+				16E178E62F3F4A7500FFCF7B /* CommonService+Defaults.swift */,
+				16E178F92F3F543300FFCF7B /* UIApplication+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -368,6 +690,7 @@
 		42F9231529FBF61B0072DDC1 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				1640B2562F4333610092AC95 /* EudiWalletDeeplinkRouteBuilder.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -386,7 +709,6 @@
 				42F9237F29FBF61B0072DDC1 /* StoreHelper.swift */,
 				42F9238529FBF61B0072DDC1 /* ScreenBrightnessHelper.swift */,
 				42F9238629FBF61B0072DDC1 /* AccessCheckers */,
-				7BE198E92B14FBDF008C9FAC /* TemplateActionFactory.swift */,
 				7BE199512B16E5E1008C9FAC /* ServicesProvider.swift */,
 			);
 			path = Services;
@@ -405,8 +727,10 @@
 			isa = PBXGroup;
 			children = (
 				42F9239529FBF61B0072DDC1 /* Logging.swift */,
-				4937CBAF2D95AC050014D2BC /* DiiaIdSigner.swift */,
 				42F49A0B2DCC94C800B8D36F /* ContextMenuConfigurable.swift */,
+				16E178E02F3F432F00FFCF7B /* BaseContextMenuProvider.swift */,
+				16E178E22F3F469D00FFCF7B /* FlowCoordinator.swift */,
+				16E178E42F3F481B00FFCF7B /* CommunicationHelper.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -527,17 +851,8 @@
 			isa = PBXGroup;
 			children = (
 				33B0352F2B29CADA00374227 /* Core */,
-				42F927BD29FBF7CE0072DDC1 /* Common */,
 			);
 			path = Authorization;
-			sourceTree = "<group>";
-		};
-		42F927BD29FBF7CE0072DDC1 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				33C78AC42B2B0D5900F97E8E /* Models */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		42F927F629FBF7CE0072DDC1 /* MainTabBar */ = {
@@ -707,6 +1022,7 @@
 				7BE1994C2B16E384008C9FAC /* Models */,
 				7BE199192B16DB2D008C9FAC /* DocumentsReordering */,
 				7B7693D62B7B058E0007A89F /* DocumentsStackReordering */,
+				16E178BF2F3F2E7C00FFCF7B /* EudiWallet */,
 			);
 			path = Documents;
 			sourceTree = "<group>";
@@ -714,6 +1030,7 @@
 		7BE199092B16DB2D008C9FAC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				16E178F22F3F4EB500FFCF7B /* ViewModels */,
 				CB4209092E9D270B00266703 /* Models */,
 				7BE1990A2B16DB2D008C9FAC /* DocumentsCollectionModuleFactory.swift */,
 				7BE199122B16DB2D008C9FAC /* Services */,
@@ -724,6 +1041,7 @@
 		7BE199122B16DB2D008C9FAC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				16E178E82F3F4C5700FFCF7B /* DocumentProviders */,
 				7BE199652B17C2ED008C9FAC /* Stubs */,
 				7BE199152B16DB2D008C9FAC /* DocumentsProcessor.swift */,
 				7BE199162B16DB2D008C9FAC /* DocumentsReservePhotoService.swift */,
@@ -766,7 +1084,6 @@
 		7BE199652B17C2ED008C9FAC /* Stubs */ = {
 			isa = PBXGroup;
 			children = (
-				7BE199132B16DB2D008C9FAC /* AddDocumentsActionProvider.swift */,
 				7BE199632B17C230008C9FAC /* FaqOpener.swift */,
 				7BE199662B17C319008C9FAC /* DriverReplacementStubModule.swift */,
 			);
@@ -802,18 +1119,16 @@
 				33C550402B48B6A200E100CD /* Lottie */,
 				339AE8692B5E6C6100C21112 /* DiiaUIComponents */,
 				339AE86B2B5E6C8500C21112 /* DiiaMVPModule */,
-				339AE86F2B5E6CA200C21112 /* DiiaCommonTypes */,
-				339AE8712B5E6CC000C21112 /* DiiaCommonServices */,
-				339AE8732B5E6CCF00C21112 /* DiiaPublicServices */,
-				339AE87B2B5E6CFE00C21112 /* DiiaAuthorization */,
-				339AE87D2B5E6CFE00C21112 /* DiiaAuthorizationMethods */,
-				339AE87F2B5E6CFE00C21112 /* DiiaAuthorizationPinCode */,
 				9487B53E2B76594800571A1D /* Alamofire */,
 				9487B5412B765B8600571A1D /* ReactiveKit */,
 				165BBC812F3CCCC500FE1C08 /* DiiaDocuments */,
 				165BBC832F3CCCC500FE1C08 /* DiiaDocumentsCommonTypes */,
 				165BBC852F3CCCC500FE1C08 /* DiiaDocumentsCore */,
 				16B2F70C2F3E08590012C8D4 /* EudiWalletKit */,
+				16E1788A2F3F245500FFCF7B /* DiiaAuthorization */,
+				16E1788E2F3F245500FFCF7B /* DiiaAuthorizationPinCode */,
+				1640B24B2F4321D00092AC95 /* DiiaCommonServices */,
+				1640B2532F43250A0092AC95 /* DiiaCommonTypes */,
 			);
 			productName = DiiaSimple;
 			productReference = 42F9229F29FBDC820072DDC1 /* DiiaOpenSource.app */;
@@ -845,16 +1160,15 @@
 			mainGroup = 42F9229629FBDC820072DDC1;
 			packageReferences = (
 				42F93A432A0104AA0072DDC1 /* XCRemoteSwiftPackageReference "ios-mvpmodule" */,
-				7B65C5D22B0367830018D510 /* XCRemoteSwiftPackageReference "ios-commontypes" */,
 				7B65C5D32B0368E50018D510 /* XCRemoteSwiftPackageReference "ios-uicomponents" */,
-				7B65C5D42B03699A0018D510 /* XCRemoteSwiftPackageReference "ios-commonservices" */,
-				7B65C5D52B0369CE0018D510 /* XCRemoteSwiftPackageReference "ios-publicservices" */,
-				33B035282B29BBBB00374227 /* XCRemoteSwiftPackageReference "ios-authorization" */,
 				33C5503F2B48B6A200E100CD /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				9487B53D2B76594800571A1D /* XCRemoteSwiftPackageReference "Alamofire" */,
 				9487B5402B765B8600571A1D /* XCRemoteSwiftPackageReference "ReactiveKit" */,
 				165BBC802F3CCCC500FE1C08 /* XCRemoteSwiftPackageReference "ios-documents" */,
 				16B2F70B2F3E08590012C8D4 /* XCRemoteSwiftPackageReference "eudi-lib-ios-wallet-kit" */,
+				16E178892F3F245500FFCF7B /* XCRemoteSwiftPackageReference "ios-authorization" */,
+				1640B24A2F4321D00092AC95 /* XCRemoteSwiftPackageReference "ios-commonservices" */,
+				1640B2522F43250A0092AC95 /* XCRemoteSwiftPackageReference "ios-commontypes" */,
 			);
 			productRefGroup = 42F922A029FBDC820072DDC1 /* Products */;
 			projectDirPath = "";
@@ -879,10 +1193,19 @@
 				42F922AF29FBDC820072DDC1 /* LaunchScreen.storyboard in Resources */,
 				42F93A0B29FBF7D90072DDC1 /* e-Ukraine-Light.otf in Resources */,
 				4937CBA02D95A7C00014D2BC /* FeedViewController.xib in Resources */,
+				16B2F7A42F3E0D140012C8D4 /* pidissuerca02_nl.der in Resources */,
+				16B2F7A52F3E0D140012C8D4 /* pidissuerca02_ut.der in Resources */,
+				16B2F7A62F3E0D140012C8D4 /* esoz_cert.der in Resources */,
+				16B2F7A72F3E0D140012C8D4 /* pidissuerca02_lu.der in Resources */,
+				16B2F7A82F3E0D140012C8D4 /* pidissuerca02_ee.der in Resources */,
+				16B2F7A92F3E0D140012C8D4 /* pidissuerca02_pt.der in Resources */,
+				16B2F7AA2F3E0D140012C8D4 /* pidissuerca02_eu.der in Resources */,
+				16B2F7AB2F3E0D140012C8D4 /* pidissuerca02_cz.der in Resources */,
 				7BD75AD92B678129000D54CA /* background_gradient.json in Resources */,
 				42F93A0929FBF7D90072DDC1 /* e-Ukraine-Medium.otf in Resources */,
 				42F93A0C29FBF7D90072DDC1 /* e-UkraineHead-Light.otf in Resources */,
 				7BE1993D2B16DB2D008C9FAC /* DocumentsReorderingViewController.xib in Resources */,
+				16E178D92F3F2E7C00FFCF7B /* ewallet_verification_display_labels.json in Resources */,
 				42F93A0A29FBF7D90072DDC1 /* e-Ukraine-Bold.otf in Resources */,
 				42F9324F29FBF7D20072DDC1 /* TitleTableCell.xib in Resources */,
 				7B7693DE2B7B05D60007A89F /* DocumentsStackReorderingViewController.xib in Resources */,
@@ -922,16 +1245,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3329AF7E2B2A5201004B8517 /* AuthorizationApiClient+Extension.swift in Sources */,
 				42F931DE29FBF7D20072DDC1 /* SplashScreenModule.swift in Sources */,
 				42F931DF29FBF7D20072DDC1 /* SplashScreenViewController.swift in Sources */,
 				42F9325629FBF7D20072DDC1 /* SettingsManager.swift in Sources */,
 				42F9310C29FBF7D10072DDC1 /* DiiaQRScannerHelper.swift in Sources */,
+				16E178E72F3F4A7500FFCF7B /* CommonService+Defaults.swift in Sources */,
 				4937CBA22D95A7C00014D2BC /* FeedViewController.swift in Sources */,
 				4937CBA62D95A7C00014D2BC /* FeedOfflineViewBuilder.swift in Sources */,
 				4937CBA82D95A7C00014D2BC /* FeedPresenter.swift in Sources */,
 				4937CBAA2D95A7C00014D2BC /* FeedModule.swift in Sources */,
-				3329AF6D2B2A1D96004B8517 /* VerificationFlow.swift in Sources */,
 				16743A192F3A2BBC006E79D8 /* DocumentReorderingService.swift in Sources */,
 				42F9310929FBF7D10072DDC1 /* QRCodeScannerPresenter.swift in Sources */,
 				7B7693D52B7B03560007A89F /* MultipleDocReorderingView.swift in Sources */,
@@ -945,12 +1267,13 @@
 				3329AF7A2B2A1F1F004B8517 /* EnterPinCodeAuthDelegate.swift in Sources */,
 				42F9339D29FBF7D30072DDC1 /* MainTabBarViewController.swift in Sources */,
 				7B7693DB2B7B05D60007A89F /* DocumentsStackReorderingPresenter.swift in Sources */,
+				16E178E52F3F481B00FFCF7B /* CommunicationHelper.swift in Sources */,
 				42F9323129FBF7D20072DDC1 /* SettingsViewController.swift in Sources */,
 				7B7693ED2B8741BC0007A89F /* NibLoadable+Extension.swift in Sources */,
 				42F9244D29FBF61B0072DDC1 /* ScreenBrightnessHelper.swift in Sources */,
+				16E178E32F3F469D00FFCF7B /* FlowCoordinator.swift in Sources */,
 				42F9322E29FBF7D20072DDC1 /* SettingsModule.swift in Sources */,
 				7BE199502B16E543008C9FAC /* DocumentsResponse.swift in Sources */,
-				3329AF6B2B29F944004B8517 /* UserAuthorizationErrorRouter.swift in Sources */,
 				3329AF782B2A1F1F004B8517 /* EnterPinCodeModuleContext+Extension.swift in Sources */,
 				3329AF792B2A1F1F004B8517 /* PinCodeStorage.swift in Sources */,
 				42F9245A29FBF61B0072DDC1 /* Logging.swift in Sources */,
@@ -958,21 +1281,41 @@
 				42F923FC29FBF61B0072DDC1 /* DeepLinkManager.swift in Sources */,
 				42F93A2129FFB2930072DDC1 /* R+String.swift in Sources */,
 				42F931DD29FBF7D20072DDC1 /* SplashScreenPresenter.swift in Sources */,
-				7BE199342B16DB2D008C9FAC /* AddDocumentsActionProvider.swift in Sources */,
 				3329AF7B2B2A1F1F004B8517 /* EnterPinCodeViewModel+Extension.swift in Sources */,
 				7BE199672B17C319008C9FAC /* DriverReplacementStubModule.swift in Sources */,
+				16E178C02F3F2E7C00FFCF7B /* EudiWalletRemoteSharingModule.swift in Sources */,
+				16E178C12F3F2E7C00FFCF7B /* EWalletAPIClient.swift in Sources */,
+				16E178C42F3F2E7C00FFCF7B /* EudiWalletDocumentType.swift in Sources */,
+				1640B2572F4333610092AC95 /* EudiWalletDeeplinkRouteBuilder.swift in Sources */,
+				16E178C72F3F2E7C00FFCF7B /* EudiWalletVerificationRequestAdapter.swift in Sources */,
+				16E178C82F3F2E7C00FFCF7B /* EudiDocumentIssuancePresenter.swift in Sources */,
+				16E178CA2F3F2E7C00FFCF7B /* EudiWalletRemoteSharingPresenter.swift in Sources */,
+				16E178CC2F3F2E7C00FFCF7B /* EWalletAPI.swift in Sources */,
+				16E178CD2F3F2E7C00FFCF7B /* EudiDocumentsQRModule.swift in Sources */,
+				16E178CF2F3F2E7C00FFCF7B /* EudiWalletOnboardingPresenter.swift in Sources */,
+				16E178D12F3F2E7C00FFCF7B /* EudiDocumentIssuanceModule.swift in Sources */,
+				16E178D22F3F2E7C00FFCF7B /* EudiDocumentsQRViewController.swift in Sources */,
+				16E178D32F3F2E7C00FFCF7B /* EudiWalletProximitySharingModule.swift in Sources */,
+				16E178D42F3F2E7C00FFCF7B /* EudiWalletOnboardingModule.swift in Sources */,
+				16E178E12F3F432F00FFCF7B /* BaseContextMenuProvider.swift in Sources */,
+				16E178D52F3F2E7C00FFCF7B /* EudiWalletProximitySharingPresenter.swift in Sources */,
+				16E178D62F3F2E7C00FFCF7B /* EudiWalletSharingDataHandler.swift in Sources */,
+				16E178D82F3F2E7C00FFCF7B /* EudiDocumentsQRPresenter.swift in Sources */,
+				16E178FA2F3F543300FFCF7B /* UIApplication+Extension.swift in Sources */,
 				16743A142F3A212D006E79D8 /* TitleTableCell.swift in Sources */,
 				7BE1994E2B16E393008C9FAC /* DocType.swift in Sources */,
 				7BE199372B16DB2D008C9FAC /* DocumentsReservePhotoService.swift in Sources */,
 				7BE1993B2B16DB2D008C9FAC /* DocumentsReorderingModule.swift in Sources */,
 				42F9339E29FBF7D30072DDC1 /* MainTabCollectionCell.swift in Sources */,
 				7B7693D12B7B02E90007A89F /* DocReorderingCellInfoView.swift in Sources */,
-				7BE198EA2B14FBDF008C9FAC /* TemplateActionFactory.swift in Sources */,
 				CB42090B2E9D272C00266703 /* LinkResponse.swift in Sources */,
 				42F922C229FBF4C10072DDC1 /* AppConfigurator.swift in Sources */,
 				42F93A0729FBF7D90072DDC1 /* AppFonts.swift in Sources */,
 				42F9339A29FBF7D30072DDC1 /* MainTabBarPresenter.swift in Sources */,
 				42F9310829FBF7D10072DDC1 /* QRCodeScannerModule.swift in Sources */,
+				16E178EC2F3F4C5E00FFCF7B /* PidDocumentProvider.swift in Sources */,
+				16E178ED2F3F4C5E00FFCF7B /* MdlDocumentProvider.swift in Sources */,
+				16E178EE2F3F4C5E00FFCF7B /* CorDocumentProvider.swift in Sources */,
 				42F9325929FBF7D20072DDC1 /* MenuPresenter.swift in Sources */,
 				42F9310B29FBF7D10072DDC1 /* QRCodeScannerViewController.swift in Sources */,
 				7BE1993C2B16DB2D008C9FAC /* DocumentsReorderingPresenter.swift in Sources */,
@@ -983,10 +1326,32 @@
 				42F9339C29FBF7D30072DDC1 /* MainTabAction.swift in Sources */,
 				7BE199522B16E5E1008C9FAC /* ServicesProvider.swift in Sources */,
 				42F922C429FBF4C10072DDC1 /* AppRouter.swift in Sources */,
-				4937CBB02D95AC070014D2BC /* DiiaIdSigner.swift in Sources */,
 				42F9244E29FBF61B0072DDC1 /* AccessHelper.swift in Sources */,
 				42F922C329FBF4C10072DDC1 /* AppConstants.swift in Sources */,
+				16B2F78F2F3E0D140012C8D4 /* EudiPresentationRequest.swift in Sources */,
+				16B2F7902F3E0D140012C8D4 /* EudiWalletIssueCredentialsRequest.swift in Sources */,
+				16B2F7912F3E0D140012C8D4 /* EudiCorDocumentModel.swift in Sources */,
+				16B2F7922F3E0D140012C8D4 /* EudiWalletCredentialStoringResult.swift in Sources */,
+				16B2F7932F3E0D140012C8D4 /* DocClaimsDecodable+Ext.swift in Sources */,
+				16B2F7942F3E0D140012C8D4 /* EudiPidDocumentModel+Ext.swift in Sources */,
+				16B2F7952F3E0D140012C8D4 /* EudiDocValue.swift in Sources */,
+				16B2F7972F3E0D140012C8D4 /* EudiMdlDocumentModel.swift in Sources */,
+				16B2F7992F3E0D140012C8D4 /* DocDataValue+Ext.swift in Sources */,
+				16B2F79A2F3E0D140012C8D4 /* EudiQRCodeView.swift in Sources */,
+				16B2F79B2F3E0D140012C8D4 /* EudiPidDocumentModel.swift in Sources */,
+				16B2F79C2F3E0D140012C8D4 /* EudiCorDocumentModel+Ext.swift in Sources */,
+				16B2F79D2F3E0D140012C8D4 /* EudiWalletKitConfig.swift in Sources */,
+				16B2F79E2F3E0D140012C8D4 /* EudiWalletKitController.swift in Sources */,
+				16B2F79F2F3E0D140012C8D4 /* EudiWalletCredentialsResponse.swift in Sources */,
+				16B2F7A02F3E0D140012C8D4 /* EudiWalletRemoteSessionManager.swift in Sources */,
+				16E178F62F3F4EBD00FFCF7B /* CorCardViewModel.swift in Sources */,
+				16E178F72F3F4EBD00FFCF7B /* PidCardViewModel.swift in Sources */,
+				16E178F82F3F4EBD00FFCF7B /* MdlCardViewModel.swift in Sources */,
+				16B2F7A12F3E0D140012C8D4 /* EudiWalletProximitySessionManager.swift in Sources */,
+				16B2F7A22F3E0D140012C8D4 /* EudiWalletError.swift in Sources */,
+				16B2F7A32F3E0D140012C8D4 /* EudiMdlDocumentModel+Ext.swift in Sources */,
 				7B7693E72B7C7E230007A89F /* AuthorizationStateHandler.swift in Sources */,
+				16E178F12F3F4D7800FFCF7B /* DocumentModelProvider.swift in Sources */,
 				42F9339B29FBF7D30072DDC1 /* MainTabBarModule.swift in Sources */,
 				42F923D529FBF61B0072DDC1 /* UIScreen+Brightness.swift in Sources */,
 				42F93A2329FFB88F0072DDC1 /* R+Images.swift in Sources */,
@@ -1149,7 +1514,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				IS_IN_DEBUG = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1184,7 +1549,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				IS_IN_DEBUG = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1227,11 +1592,27 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1640B24A2F4321D00092AC95 /* XCRemoteSwiftPackageReference "ios-commonservices" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nkoruts/ios-commonservices.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		1640B2522F43250A0092AC95 /* XCRemoteSwiftPackageReference "ios-commontypes" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nkoruts/ios-commontypes.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		165BBC802F3CCCC500FE1C08 /* XCRemoteSwiftPackageReference "ios-documents" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nkoruts/ios-documents.git";
 			requirement = {
-				branch = develop;
+				branch = main;
 				kind = branch;
 			};
 		};
@@ -1239,16 +1620,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/eu-digital-identity-wallet/eudi-lib-ios-wallet-kit.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.20.0;
+				kind = exactVersion;
+				version = 0.19.4;
 			};
 		};
-		33B035282B29BBBB00374227 /* XCRemoteSwiftPackageReference "ios-authorization" */ = {
+		16E178892F3F245500FFCF7B /* XCRemoteSwiftPackageReference "ios-authorization" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/diia-open-source/ios-authorization.git";
+			repositoryURL = "https://github.com/nkoruts/ios-authorization";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 		33C5503F2B48B6A200E100CD /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
@@ -1267,36 +1648,12 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		7B65C5D22B0367830018D510 /* XCRemoteSwiftPackageReference "ios-commontypes" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/diia-open-source/ios-commontypes.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		7B65C5D32B0368E50018D510 /* XCRemoteSwiftPackageReference "ios-uicomponents" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/diia-open-source/ios-uicomponents.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 1.0.18;
-			};
-		};
-		7B65C5D42B03699A0018D510 /* XCRemoteSwiftPackageReference "ios-commonservices" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/diia-open-source/ios-commonservices.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		7B65C5D52B0369CE0018D510 /* XCRemoteSwiftPackageReference "ios-publicservices" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/diia-open-source/ios-publicservices.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.0.0;
 			};
 		};
 		9487B53D2B76594800571A1D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -1318,6 +1675,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1640B24B2F4321D00092AC95 /* DiiaCommonServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1640B24A2F4321D00092AC95 /* XCRemoteSwiftPackageReference "ios-commonservices" */;
+			productName = DiiaCommonServices;
+		};
+		1640B2532F43250A0092AC95 /* DiiaCommonTypes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1640B2522F43250A0092AC95 /* XCRemoteSwiftPackageReference "ios-commontypes" */;
+			productName = DiiaCommonTypes;
+		};
 		165BBC812F3CCCC500FE1C08 /* DiiaDocuments */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 165BBC802F3CCCC500FE1C08 /* XCRemoteSwiftPackageReference "ios-documents" */;
@@ -1338,6 +1705,16 @@
 			package = 16B2F70B2F3E08590012C8D4 /* XCRemoteSwiftPackageReference "eudi-lib-ios-wallet-kit" */;
 			productName = EudiWalletKit;
 		};
+		16E1788A2F3F245500FFCF7B /* DiiaAuthorization */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16E178892F3F245500FFCF7B /* XCRemoteSwiftPackageReference "ios-authorization" */;
+			productName = DiiaAuthorization;
+		};
+		16E1788E2F3F245500FFCF7B /* DiiaAuthorizationPinCode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16E178892F3F245500FFCF7B /* XCRemoteSwiftPackageReference "ios-authorization" */;
+			productName = DiiaAuthorizationPinCode;
+		};
 		339AE8692B5E6C6100C21112 /* DiiaUIComponents */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7B65C5D32B0368E50018D510 /* XCRemoteSwiftPackageReference "ios-uicomponents" */;
@@ -1347,36 +1724,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 42F93A432A0104AA0072DDC1 /* XCRemoteSwiftPackageReference "ios-mvpmodule" */;
 			productName = DiiaMVPModule;
-		};
-		339AE86F2B5E6CA200C21112 /* DiiaCommonTypes */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7B65C5D22B0367830018D510 /* XCRemoteSwiftPackageReference "ios-commontypes" */;
-			productName = DiiaCommonTypes;
-		};
-		339AE8712B5E6CC000C21112 /* DiiaCommonServices */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7B65C5D42B03699A0018D510 /* XCRemoteSwiftPackageReference "ios-commonservices" */;
-			productName = DiiaCommonServices;
-		};
-		339AE8732B5E6CCF00C21112 /* DiiaPublicServices */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7B65C5D52B0369CE0018D510 /* XCRemoteSwiftPackageReference "ios-publicservices" */;
-			productName = DiiaPublicServices;
-		};
-		339AE87B2B5E6CFE00C21112 /* DiiaAuthorization */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 33B035282B29BBBB00374227 /* XCRemoteSwiftPackageReference "ios-authorization" */;
-			productName = DiiaAuthorization;
-		};
-		339AE87D2B5E6CFE00C21112 /* DiiaAuthorizationMethods */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 33B035282B29BBBB00374227 /* XCRemoteSwiftPackageReference "ios-authorization" */;
-			productName = DiiaAuthorizationMethods;
-		};
-		339AE87F2B5E6CFE00C21112 /* DiiaAuthorizationPinCode */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 33B035282B29BBBB00374227 /* XCRemoteSwiftPackageReference "ios-authorization" */;
-			productName = DiiaAuthorizationPinCode;
 		};
 		33C550402B48B6A200E100CD /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;

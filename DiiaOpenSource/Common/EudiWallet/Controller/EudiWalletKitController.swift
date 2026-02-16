@@ -42,19 +42,17 @@ final class EudiWalletKitController: EudiWalletKitProtocol {
     
     private init(configLogic: EudiWalletKitConfig = EudiWalletKitConfig()) {
         self.configLogic = configLogic
+        
         guard let walletKit = try? EudiWallet(
-            eudiWalletConfig: EudiWalletConfiguration(
-                serviceName: configLogic.serviceName,
-                accessGroup: <#T##String?#>,
-                userAuthenticationRequired: configLogic.userAuthenticationRequired,
-                trustedReaderCertificates: configLogic.trustedCerts,
-                deviceAuthMethod: <#T##DeviceAuthMethod#>,
-                uiCulture: <#T##String?#>,
-                logFileName: <#T##String?#>
-            ),
-            openID4VpConfig: configLogic.vpConfig,
-            openID4VciConfigurations: configLogic.vciConfig,
-        ) else { fatalError("Unable to Initialize WalletKit") }
+          serviceName: configLogic.serviceName,
+          trustedReaderCertificates: configLogic.trustedCerts,
+          userAuthenticationRequired: configLogic.userAuthenticationRequired,
+          openID4VpConfig: configLogic.vpConfig,
+          openID4VciConfigurations: configLogic.vciConfig
+        ) else {
+          fatalError("Unable to Initialize WalletKit")
+        }
+        
         wallet = walletKit
     }
     
@@ -116,7 +114,7 @@ final class EudiWalletKitController: EudiWalletKitProtocol {
     }
     
     public func deleteDocuments(with docType: String) async throws {
-        return try await wallet.storage.deleteDocuments(docType: docType)
+//        return try await wallet.storage.deleteDocuments(docType: docType)
     }
     
     public func deleteDocument(with id: String) async throws {

@@ -5,10 +5,6 @@ import DiiaAuthorization
 struct AuthorizationStorage: AuthorizationStorageProtocol {
     let storage: StoreHelper
 
-    func getMobileUID() -> String {
-        return ""
-    }
-
     func getHashedPincode() -> String? {
         return storage.getValue(forKey: .authPincode)
     }

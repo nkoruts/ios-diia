@@ -1,5 +1,6 @@
 import Foundation
 import DiiaMVPModule
+import DiiaCommonTypes
 
 enum QRScannerResult {
     case none
@@ -32,6 +33,10 @@ class DiiaQRScannerHelper: NSObject, QRScannerDelegate {
             return .error(message: R.Strings.qr_incorrect_code.localized())
         }
         
+        if let walletRouter = EudiWalletDeeplinkRouteBuilder().create(with: code) {
+            return processEudiWallet(router: walletRouter, in: view)
+        }
+        
         guard let routerFabric = DeeplinksRoutersList.userRouters.first(where: { $0.canCreateRoute(with: components.path) }),
               let deeplinkRouter = routerFabric.create(pathString: components.path)
         else {
@@ -42,6 +47,16 @@ class DiiaQRScannerHelper: NSObject, QRScannerDelegate {
             deeplinkRouter.route(in: view)
         }
         
+        return .success
+    }
+    
+    private func processEudiWallet(router: RouterProtocol, in view: BaseView?) -> QRScannerResult {
+        guard ServicesProvider.shared.authService.isAuthorized() else {
+            return .error(message: "Будь ласка,\nавторизуйтесь")
+        }
+        if let view = view ?? presentingView {
+            router.route(in: view)
+        }
         return .success
     }
 }

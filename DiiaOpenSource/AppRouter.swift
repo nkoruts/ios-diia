@@ -128,13 +128,12 @@ class AppRouter {
     
     // MARK: - Private
     private func routeStart() {
-        func preparePinCodeModule(_ authFlow: AuthFlow) -> CreatePinCodeModule {
+        func preparePinCodeModule() -> CreatePinCodeModule {
             return CreatePinCodeModule(
                     viewModel: PinCodeViewModel(
                     pinCodeLength: AppConstants.defaultPinCodeLength,
                     createDetails: R.Strings.authorization_new_pin_details.localized(),
                     repeatDetails: R.Strings.authorization_repeat_pin_details.localized(),
-                    authFlow: authFlow,
                     completionHandler: { (pincode, view) in
                         ServicesProvider.shared.authService.setPincode(pincode: pincode)
                         AppRouter.instance.open(module: MainTabBarModule(), needPincode: false, asRoot: true)
@@ -147,7 +146,7 @@ class AppRouter {
         if ServicesProvider.shared.authService.havePincode() {
             open(module: MainTabBarModule(), needPincode: true, asRoot: true)
         } else {
-            open(module: preparePinCodeModule(.login), needPincode: false)
+            open(module: preparePinCodeModule(), needPincode: false)
         }
     }
     

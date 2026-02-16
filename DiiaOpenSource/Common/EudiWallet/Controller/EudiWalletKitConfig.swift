@@ -15,20 +15,10 @@ struct EudiWalletKitConfig {
     
     var vciConfig: [String: OpenId4VciConfiguration] {
         return [
-            "api2t.diia.gov.ua": OpenId4VciConfiguration(
-                credentialIssuerURL: "https://api2t.diia.gov.ua/api/v1/wallet",
-                clientId: "wallet-dev",
-                authFlowRedirectionURI: URL(string: "eu.europa.ec.euidi://authorization")
-            ),
             "ec.dev.issuer.eudiw.dev": OpenId4VciConfiguration(
                 credentialIssuerURL: "https://ec.dev.issuer.eudiw.dev",
                 clientId: "wallet-dev",
                 authFlowRedirectionURI: URL(string: "eu.europa.ec.euidi://authorization")
-            ),
-            "dev.issuer-backend.eudiw.dev": OpenId4VciConfiguration(
-              credentialIssuerURL: "https://dev.issuer-backend.eudiw.dev",
-              clientId: "wallet-dev",
-              authFlowRedirectionURI: URL(string: "eu.europa.ec.euidi://authorization")
             )
         ]
     }

@@ -28,6 +28,8 @@ struct DocumentsCollectionModuleFactory {
                 DocumentsStackRouter(docType: $0, docProvider: DocumentsProcessor.instance)
             },
             documentsReorderingConfiguration: reorderingConfig,
+            addDocumentsService: AddDocumentsService(),
+            activationModule: { EudiWalletOnboardingModule(documentType: .pid) },
             imageNameProvider: DSImageNameResolver.instance,
             screenBrightnessService: ScreenBrightnessHelper.shared)
         )

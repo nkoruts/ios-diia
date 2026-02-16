@@ -48,7 +48,8 @@ final class EudiWalletOnboardingPresenter: ConstructorScreenPresenter, ContextMe
     func configureView() {
         view.setupBackground(.image(R.image.light_background.image ?? UIImage()))
             
-        fetchScreen()
+//        fetchScreen()
+        activateEudiWallet()
     }
     
     func openContextMenu() {

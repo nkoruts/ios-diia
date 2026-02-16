@@ -7,10 +7,7 @@ extension AuthorizationContext {
         .init(network: .create(),
               storage: AuthorizationStorage(storage: StoreHelper.instance),
               serviceAuthSuccessModule: nil,
-              refreshTemplateActionProvider: RefreshTemplateActionProviderImpl(),
-              authStateHandler: AuthorizationStateHandler(appRouter: AppRouter.instance, storage: StoreHelper.instance),
-              userAuthorizationErrorRouter: UserAuthorizationErrorRouter(),
-              analyticsHandler: AnalyticsAuthorizationAdapter())
+              authStateHandler: AuthorizationStateHandler(appRouter: AppRouter.instance, storage: StoreHelper.instance))
     }
 }
 
@@ -22,12 +19,4 @@ extension AuthorizationNetworkContext {
             headers: nil
         )
     }
-}
-
-// TODO: - REMOVE AnalyticsAuthorizationAdapter
-final class AnalyticsAuthorizationAdapter: AnalyticsAuthorizationHandler {
-    
-    func trackSuccessForTarget(target: AuthTarget) { }
-    
-    func trackFailForTarget(target: AuthTarget, error: NetworkError) { }
 }

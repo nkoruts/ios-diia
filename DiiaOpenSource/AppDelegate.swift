@@ -59,9 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.addSubview(stubImage)
         self.window?.endEditing(true)
         UIView.animate(withDuration: 0.2, animations: { self.stubImage.alpha = 1 })
-        if router.didFinishStarting {
-            ServicesProvider.shared.authService.setLastPincodeDate(date: Date())
-        }
         ScreenBrightnessHelper.shared.resetBrightness()
     }
     
